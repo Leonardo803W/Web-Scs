@@ -3,11 +3,25 @@ const Navbar = () => {
     return(
         <>
         <div id='navbar'>
-            <p className='itemnavbar'>Chi siamo</p>
-            <p className='itemnavbar'>Iscrizioni</p>
-            <p className='itemnavbar'>Collaborazioni</p>
-            <p className='itemnavbar'>Vecchi corsi</p>
-            <p className='itemnavbar'>Contatti</p>
+            <div className = "item-content">
+                <p className = 'item-navbar'>Chi siamo</p>
+            </div>
+            
+            <div className = "item-content">
+                <p className = 'item-navbar'>Iscrizioni</p>
+            </div>
+
+            <div className = "item-content">
+                <p className = 'item-navbar'>Collaborazioni</p>
+            </div>
+
+            <div className = "item-content">
+                <p className = 'item-navbar'>Vecchi corsi</p>
+            </div>
+
+            <div className = "item-content">
+                <p className = 'item-navbar'>Contatti</p>
+            </div>
         </div> 
         </>
     )
