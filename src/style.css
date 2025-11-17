@@ -1,0 +1,36 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+  color: black;
+  margin: 0;
+}
+
+/*css navbar*/
+
+#navbar {
+  background-color: black;
+  display: flex;
+  padding: 1rem;
+  justify-content: space-around;
+  color: lightblue;
+}
+
+#navbar > p :hover {
+  color: #ffffff;
+  background-color: #3ca976;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  box-shadow: -5px -4px 12px 0px;
+}
