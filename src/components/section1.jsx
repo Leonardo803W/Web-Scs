@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import img1 from '../img/logo-scs-02.png'
 import imgLink1 from '../img/immagini per link footer/ecampus.png'
 import imgLink2 from '../img/immagini per link footer/comune novedrate.jpeg'
 import imgLink3 from '../img/immagini per link footer/regione lombardia.png'
 import imgLink4 from '../img/immagini per link footer/protezione civile como.jpeg'
 import imgLink5 from '../img/immagini per link footer/anci lombardia.gif'
+import imgSection1 from '../img/DSC_0774.JPG'
+import imgSection2 from '../img/DSCF6058.jpg'
 
 const cards = [
     {id: 1,
@@ -52,17 +53,16 @@ const Section1 = () => {
         <section id = 'section1'>
 
             <div id = 'intro'>
-                <img src = {img1} alt = "logo sito" />
                 <div id = 'introduzione'>
-                    <h1 className = 'm-0 p-2'>Studenti con le Stellette</h1>
-                    <h3 className = 'm-0 p-2'>la settimana che ti svolterà la vita</h3>
+                    <h1>Studenti con le Stellette</h1>
+                    <h3>Scuola civica in stile militare</h3>
+                    <p className = 'm-0'>la settimana che ti svolterà la vita</p>
                 </div>
-                <img src = {img1} alt = "logo sito" />
             </div>
             
             <article id = 'articole1'>
                 <h5 className = 'm-0 p-3'>Che cosa ti proponiamo in questo progetto</h5>
-                <p className = 'm-0 p-3'>
+                <p>
                     L’Associazione Studenti con le stellette organizza un Corso di una settimana, di impegno-vacanza per un gruppo di studenti frequentanti il triennio della scuola secondaria di secondo grado.
                     Il periodo in cui si svolge l'iniziativa è generalmente l'ultima settimana di agosto.
                     I ragazzi e le ragazze saranno protagonisti di momenti formativi teorici e pratici in materia di sicurezza stradale e personale, pronto soccorso, prevenzione dei orientamento sul territorio, auto-protezione in caso di calamità naturali e tanto altro anche in materia di Istituzioni, Polizia e Forze Armate. Durante la settimana saranno alternati momenti di impegno a momenti di svago e divertimento, compresa “libera uscita serale”, visite, escursioni, giochi, sport. Agli allievi saranno rilasciati degli attestati di frequenza per alcuni corsi come “BLSD Laico” e per aspirante volontario di Protezione Civile A0-01 da AREU-AAT Como e Regione Lombardia, inoltre, le ore di addestramento, servizi e istruzione potranno essere conteggiate quale alternanza scuola-lavoro previa stipula di apposita convenzione con i Dirigenti Scolastici degli Istituti di appartenenza dei partecipanti.
@@ -71,7 +71,11 @@ const Section1 = () => {
 
             <article id = 'articole2' className = 'text-center'>
                 <h5 className = 'm-0 p-3'> L’esperienza sotto la lente d’ingrandimento</h5>
-                <iframe width="100%" height="391" src="https://www.youtube.com/embed/w_ZsGiLbCOc" title="Studenti con le Stellette, il racconto..." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div>
+                    <p>mettere brouscur</p>
+                    <iframe width="100%" height="391" src="https://www.youtube.com/embed/w_ZsGiLbCOc" title="Studenti con le Stellette, il racconto..." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
             </article>
 
             <article id = 'articole3' className = 'text-center mt-5 mb-5'>
