@@ -5,11 +5,7 @@ const Navbar = ({ triggerAlert }) => {
 
     const handelAlert = (n) => {
         
-        switch (n) {
-        case 1:
-            triggerAlert(); // chiama la funzione passata dal parent
-        break;
-        }
+        triggerAlert(1);
     }
 
     return(

@@ -1,11 +1,10 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import imgLink1 from '../img/immagini per link footer/ecampus.png'
 import imgLink2 from '../img/immagini per link footer/comune novedrate.jpeg'
 import imgLink3 from '../img/immagini per link footer/regione lombardia.png'
 import imgLink4 from '../img/immagini per link footer/protezione civile como.jpeg'
 import imgLink5 from '../img/immagini per link footer/anci lombardia.gif'
-import imgSection1 from '../img/DSC_0774.JPG'
-import imgSection2 from '../img/DSCF6058.jpg'
 
 const cards = [
     {id: 1,
@@ -61,21 +60,33 @@ const Section1 = () => {
             </div>
             
             <article id = 'articole1'>
-                <h5 className = 'm-0 p-3'>Che cosa ti proponiamo in questo progetto</h5>
-                <p>
-                    L’Associazione Studenti con le stellette organizza un Corso di una settimana, di impegno-vacanza per un gruppo di studenti frequentanti il triennio della scuola secondaria di secondo grado.
-                    Il periodo in cui si svolge l'iniziativa è generalmente l'ultima settimana di agosto.
-                    I ragazzi e le ragazze saranno protagonisti di momenti formativi teorici e pratici in materia di sicurezza stradale e personale, pronto soccorso, prevenzione dei orientamento sul territorio, auto-protezione in caso di calamità naturali e tanto altro anche in materia di Istituzioni, Polizia e Forze Armate. Durante la settimana saranno alternati momenti di impegno a momenti di svago e divertimento, compresa “libera uscita serale”, visite, escursioni, giochi, sport. Agli allievi saranno rilasciati degli attestati di frequenza per alcuni corsi come “BLSD Laico” e per aspirante volontario di Protezione Civile A0-01 da AREU-AAT Como e Regione Lombardia, inoltre, le ore di addestramento, servizi e istruzione potranno essere conteggiate quale alternanza scuola-lavoro previa stipula di apposita convenzione con i Dirigenti Scolastici degli Istituti di appartenenza dei partecipanti.
-                </p>
+                <h5>Che cosa ti proponiamo in questo progetto</h5>
+                <div>
+                    <p>
+                        L’Associazione Studenti con le Stellette organizza una settimana di impegno-vacanza per studenti del triennio delle superiori, generalmente nell’ultima settimana di agosto. 
+                        Durante il corso i partecipanti vivranno attività formative legate alla sicurezza stradale e personale, primo soccorso, prevenzione, orientamento sul territorio e introduzione a Istituzioni, Polizia e Forze Armate. 
+                        La settimana alterna momenti di formazione a svago, visite, giochi ed escursioni, con rilascio di attestati utili anche per l’alternanza scuola-lavoro…
+                    </p>   
+
+                    <Link>
+                        <button>Leggi di piu'</button>
+                    </Link>                 
+                </div>
             </article>
 
             <article id = 'articole2' className = 'text-center'>
                 <h5 className = 'm-0 p-3'> L’esperienza sotto la lente d’ingrandimento</h5>
-                <div>
-                    <p>mettere brouscur</p>
-                    <iframe width="100%" height="391" src="https://www.youtube.com/embed/w_ZsGiLbCOc" title="Studenti con le Stellette, il racconto..." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
                 
+                <iframe 
+                    width="100%" 
+                    height="391" 
+                    src="https://www.youtube.com/embed/w_ZsGiLbCOc" 
+                    title="Studenti con le Stellette, il racconto..." 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
             </article>
 
             <article id = 'articole3' className = 'text-center mt-5 mb-5'>

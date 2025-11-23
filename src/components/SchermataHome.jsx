@@ -10,15 +10,15 @@ const SchermataHome = () => {
     
     const handleMenu = (n) => {
     
-        if(n = 1)
+        if(n === 1)
         {
-                setMenuShow(true)
-                console.log(menuShow)
+            setMenuShow(true)
+            //console.log(menuShow)
         }
         else
         {
             setMenuShow(false)
-            console.log(menuShow)
+            //console.log(menuShow)
         }
     }
 
@@ -27,7 +27,7 @@ const SchermataHome = () => {
             <div className = {menuShow ? 'showMenuOn' : 'showmenuOf'}>
                 <div className = "d-flex justify-content-between">
                     <p className = "itemP">Menu:</p>
-                    <p id = "itemNavbarClose" onClick = {() => handleMenu()}>&times;</p>
+                    <p id = "itemNavbarClose" onClick = {() => handleMenu(2)}>&times;</p>
                 </div>
                 <hr className = "itemHr"/>
                 <div className = "ps-4">
