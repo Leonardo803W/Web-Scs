@@ -1,7 +1,9 @@
 import { useState } from "react";
-import Footer from "./Footer";
-import Navbar from "./Navbar";
-import Section1 from "./section1";
+import { Link } from "react-router-dom";
+
+import GlobalFooterScs from "./GlobalFooterScs";
+import GlobalNavbarScs from "./GlobalNavbarScs";
+import HomeSection1 from "./HomeSection1";
 
 const SchermataHome = () => {
 
@@ -31,7 +33,9 @@ const SchermataHome = () => {
                 </div>
                 <hr className = "itemHr"/>
                 <div className = "ps-4">
-                    <p className = "itemP">Chi siamo</p>
+                    <Link to={'/ChiSiamo'}>
+                        <p className = "itemP">Chi siamo</p>
+                    </Link>
                     <hr className = "itemHr"/>
                     <p className = "itemP">Iscrizioni</p>
                     <hr className = "itemHr"/>
@@ -41,19 +45,23 @@ const SchermataHome = () => {
                     <hr className = "itemHr"/>
                     <p className = "itemP">Contatti</p>
                     <hr className = "itemHr"/>
+                    <Link to={'/'}>
+                        <p className = "itemP">Home</p>
+                    </Link>
+                    <hr className = "itemHr"/>
                 </div>
             </div>
 
             <header>
-                <Navbar triggerAlert = {handleMenu}/>
+                <GlobalNavbarScs triggerAlert = {handleMenu}/>
             </header>
             
             <main>
-                <Section1/>
+                <HomeSection1/>
             </main>
 
             <footer>
-                <Footer/>
+                <GlobalFooterScs/>
             </footer>
         </>
     )
