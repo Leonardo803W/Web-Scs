@@ -3,6 +3,8 @@ const ChiSiamoSection1 = () => {
     return(
         <>
             <section>
+                <h1 className = 'm-3'>Chi siamo</h1>
+                <hr />
 
                 <div id = 'nascita'>
 

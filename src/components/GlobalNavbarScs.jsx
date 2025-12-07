@@ -22,30 +22,38 @@ const GlobalNavbarScs = ({ triggerAlert }) => {
         
             <div id = "navbarLaptop">
                 <div className = "item-content">
+                    <Link to={'/'}>
+                        <p className = 'item-navbar'>Home</p>
+                    </Link>
+                </div>    
+
+                <div className = "item-content">
                     <Link to={'/ChiSiamo'}>
                         <p className = 'item-navbar'>Chi siamo</p>
                     </Link>
                 </div>
                 
                 <div className = "item-content">
-                    <p className = 'item-navbar'>Iscrizioni</p>
+                    <Link to={'/Iscrizioni'}>
+                        <p className = 'item-navbar'>Iscrizioni</p>
+                    </Link>
                 </div>
 
                 <div className = "item-content">
-                    <p className = 'item-navbar'>Collaborazioni</p>
+                    <Link to={'/Collaborazioni'}>
+                        <p className = 'item-navbar'>Collaborazioni</p>
+                    </Link>
                 </div>
 
                 <div className = "item-content">
-                    <p className = 'item-navbar'>Vecchi corsi</p>
+                    <Link to={'/VecchiCorsi'}>
+                        <p className = 'item-navbar'>Vecchi Corsi</p>
+                    </Link>
                 </div>
 
                 <div className = "item-content">
-                    <p className = 'item-navbar'>Contatti</p>
-                </div>
-
-                <div className = "item-content">
-                    <Link to={'/'}>
-                        <p className = 'item-navbar'>Home</p>
+                    <Link to={'/Contatti'}>
+                        <p className = 'item-navbar'>Contatti</p>
                     </Link>
                 </div>
             </div> 

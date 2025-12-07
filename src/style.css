@@ -358,6 +358,67 @@ body{
   margin-bottom: 1rem;
 }
 
+/*css IscrizioniSection1*/
+
+#introIscrizioni{
+  background-image: url('./img/immagini\ per\ section1/DSC_2376.JPG mateo.JPG');
+  background-size: cover;
+  height: 21rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  padding: 4rem 0rem 0rem 8rem;
+}
+
+#introIscrizioni p{
+  background-color: #ffffffab;
+  margin: 0;
+  padding: 0.5rem;
+  font-size: small;
+  color: black;
+  border-radius: 2rem 0rem 0rem 2rem;
+}
+
+/*css VecchiCorsiSection1*/
+
+.vecchiCorsiSinistra h5{
+  margin: 1rem;
+}
+
+.vecchiCorsiSinistra img{
+  width: 100%;
+}
+
+.vecchiCorsiSinistra p{
+  margin-bottom: 1rem;
+  margin-right: 4rem;
+  background-color: #46a346;
+  padding: 1rem;
+  border-radius: 0rem 5rem 6rem 1rem;
+  transform: skewX(10deg);
+  box-shadow: -25px 0px 20px 4px;
+  font-size: small;
+  z-index: -1;
+  position: relative;
+}
+
+/*css ContattiSection1*/
+
+#coordinate h5{
+  margin: 1rem;
+  font-size: larger;
+}
+
+#coordinate p{
+  margin: 1rem;
+  font-size: smaller;
+}
+
+#coordinate iframe{
+  border: 0px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
 /*css footer*/
 
 #footer{
@@ -369,6 +430,7 @@ body{
 #footer h5{
   margin: 0;
   padding: 0.5rem;
+  z-index: -1;
 }
 
 #footer p{ 

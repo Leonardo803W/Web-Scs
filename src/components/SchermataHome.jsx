@@ -33,20 +33,28 @@ const SchermataHome = () => {
                 </div>
                 <hr className = "itemHr"/>
                 <div className = "ps-4">
+                    <Link to={'/'}>
+                        <p className = "itemP">Home</p>
+                    </Link>
+                    <hr className = "itemHr"/>                    
                     <Link to={'/ChiSiamo'}>
                         <p className = "itemP">Chi siamo</p>
                     </Link>
                     <hr className = "itemHr"/>
-                    <p className = "itemP">Iscrizioni</p>
+                    <Link to={'/Iscrizioni'}>
+                        <p className = "itemP">Iscrizioni</p>
+                    </Link>
                     <hr className = "itemHr"/>
-                    <p className = "itemP">Collaborazioni</p>
+                    <Link to={'/Collaborazioni'}>
+                        <p className = "itemP">Collaborazioni</p>
+                    </Link>
                     <hr className = "itemHr"/>
-                    <p className = "itemP">Vecchi corsi</p>
+                    <Link to={'/VecchiCorsi'}>
+                        <p className = "itemP">Vecchi corsi</p>
+                    </Link>
                     <hr className = "itemHr"/>
-                    <p className = "itemP">Contatti</p>
-                    <hr className = "itemHr"/>
-                    <Link to={'/'}>
-                        <p className = "itemP">Home</p>
+                    <Link to={'/Contatti'}>
+                        <p className = "itemP">Contatti</p>
                     </Link>
                     <hr className = "itemHr"/>
                 </div>
