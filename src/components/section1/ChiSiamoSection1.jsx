@@ -68,8 +68,7 @@ const ChiSiamoSection1 = () => {
                             width="100%" 
                             height="391" 
                             src='https://www.youtube.com/embed/5tb1awRVZC0'
-                            title="Studenti con le Stellette, il racconto..." 
-                            frameborder="0" 
+                            title="Studenti con le Stellette, il racconto..."
                             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen>

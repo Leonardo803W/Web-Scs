@@ -1,4 +1,4 @@
-import imgCollaborazioni from '../img/immagini per section1/DSC_2429.JPG'
+import imgCollaborazioni from '../../img/immagini per section1/DSC_2429.JPG'
 
 const CollaborazioniSection1 = () => {
 

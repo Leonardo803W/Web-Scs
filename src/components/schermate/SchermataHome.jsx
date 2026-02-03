@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import GlobalFooterScs from "./GlobalFooterScs";
-import GlobalNavbarScs from "./GlobalNavbarScs";
-import ContattiSection1 from "./ContattiSection1";
+import GlobalFooterScs from "../GlobalFooterScs";
+import GlobalNavbarScs from "../GlobalNavbarScs";
+import Home from "../Home";
 
-const SchermataContatti = () => {
+const SchermataHome = () => {
 
 
     const [menuShow, setMenuShow] = useState (false);
@@ -65,7 +65,7 @@ const SchermataContatti = () => {
             </header>
             
             <main>
-                <ContattiSection1/>
+                <Home/>
             </main>
 
             <footer>
@@ -75,4 +75,4 @@ const SchermataContatti = () => {
     )
 }
 
-export default SchermataContatti;
+export default SchermataHome;

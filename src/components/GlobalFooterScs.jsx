@@ -3,11 +3,11 @@ const GlobalFooterScs = () => {
     return(
         <>
             <section id = "footer">
-                <h5 className = "m-0">ScS sul’onda delle nuove tendenze social</h5>
+                <h5>ScS sul’onda delle nuove tendenze social</h5>
                 <div>
-                    <p className = "m-0 d-inline">se vuoi rimanere aggiornato i nostri social sono i seguenti:</p>
+                    <p>se vuoi rimanere aggiornato i nostri social sono i seguenti:</p>
                    
-                   <div className = "d-inline">
+                   <div>
                         <a 
                             href="https://www.tiktok.com/@studentistellette" 
                             target="_blank" 

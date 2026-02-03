@@ -1,11 +1,11 @@
 import React from "react";
-import SchermataHome from './components/SchermataHome';
+import SchermataHome from './components/schermate/SchermataHome';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import SchermataChiSiamo from "./components/SchermataChiSiamo";
-import SchermataIscrizioni from "./components/SchermataIscrizioni";
-import SchermataCollaborazioni from "./components/SchermataCollaborazioni";
-import SchermataVecchiCorsi from "./components/SchermataVecchiCorsi";
-import SchermataContatti from "./components/SchermataContatti";
+import SchermataChiSiamo from "./components/schermate/SchermataChiSiamo";
+import SchermataIscrizioni from "./components/schermate/SchermataIscrizioni";
+import SchermataCollaborazioni from "./components/schermate/SchermataCollaborazioni";
+import SchermataVecchiCorsi from "./components/schermate/SchermataVecchiCorsi";
+import SchermataContatti from "./components/schermate/SchermataContatti";
 
 function App() {
   return (

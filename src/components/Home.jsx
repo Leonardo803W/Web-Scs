@@ -6,7 +6,7 @@ import imgLink3 from '../img/immagini per link footer/regione lombardia.png'
 import imgLink4 from '../img/immagini per link footer/protezione civile como.jpeg'
 import imgLink5 from '../img/immagini per link footer/anci lombardia.gif'
 
-const HomeSection1 = () => {
+const Home = () => {
 
     return(
         <>
@@ -24,19 +24,22 @@ const HomeSection1 = () => {
                 <h5>Che cosa ti proponiamo in questo progetto</h5>
                 <div>
                     <p>
-                        L’Associazione Studenti con le Stellette organizza una settimana di impegno-vacanza per studenti del triennio delle superiori, generalmente nell’ultima settimana di agosto. 
-                        Durante il corso i partecipanti vivranno attività formative legate alla sicurezza stradale e personale, primo soccorso, prevenzione, orientamento sul territorio e introduzione a Istituzioni, Polizia e Forze Armate. 
-                        La settimana alterna momenti di formazione a svago, visite, giochi ed escursioni, con rilascio di attestati utili anche per l’alternanza scuola-lavoro…
+                        Durante il progetto, gli allievi del corso prenderanno parte a attività formative multidisciplinari 🎓, pensate per sviluppare competenze pratiche e consapevolezza civica.
                     </p>   
-
+                        
+                    <p>
+                        Il percorso includerà moduli dedicati alla sicurezza stradale e personale 🚦🛡️, al primo soccorso 🚑, alla prevenzione e gestione dei rischi legati a eventi e disastri naturali 🌍⚠️, 
+                        oltre a numerose altre attività formative volte a preparare i partecipanti ad affrontare situazioni di emergenza e di vita quotidiana in modo responsabile e consapevole...
+                    </p>  
+                    
                     <Link to={'/ChiSiamo'}>
                         <button>Leggi di piu'</button>
-                    </Link>                 
+                    </Link>              
                 </div>
             </article>
 
             <article id = 'articole2'>
-                <h5 className = 'm-0 p-3'> L’esperienza sotto la lente d’ingrandimento</h5>
+                <h5> L’esperienza sotto la lente d’ingrandimento</h5>
                 
                 <iframe 
                     width="100%" 
@@ -80,4 +83,4 @@ const HomeSection1 = () => {
     )
 }
 
-export default HomeSection1;
+export default Home;

@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import GlobalFooterScs from "./GlobalFooterScs";
-import GlobalNavbarScs from "./GlobalNavbarScs";
-import CollaborazioniSection1 from "./CollaborazioniSection1";
+import GlobalFooterScs from "../GlobalFooterScs";
+import GlobalNavbarScs from "../GlobalNavbarScs";
+import VecchiCorsiSection1 from "../section4/VecchiCorsiSection1";
 
-const SchermataCollaborazioni = () => {
+const SchermataVecchiCorsi = () => {
 
 
     const [menuShow, setMenuShow] = useState (false);
@@ -65,7 +65,7 @@ const SchermataCollaborazioni = () => {
             </header>
             
             <main>
-                <CollaborazioniSection1/>
+                <VecchiCorsiSection1/>
             </main>
 
             <footer>
@@ -75,4 +75,4 @@ const SchermataCollaborazioni = () => {
     )
 }
 
-export default SchermataCollaborazioni;
+export default SchermataVecchiCorsi;

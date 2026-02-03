@@ -1,11 +1,11 @@
-import ImgCorso1 from '../img/immagini per section1/1corsoLiberta.jpg'
-import ImgCorso2 from '../img/immagini per section1/2corso.jpg'
-import ImgCorso3 from '../img/immagini per section1/3corso.jpg'
-import ImgCorso4 from '../img/immagini per section1/4corso.jpg'
-import ImgCorso5 from '../img/immagini per section1/5corso.jpg'
-import ImgCorso6 from '../img/immagini per section1/6corso.jpg'
-import ImgCorso7 from '../img/immagini per section1/7corso.jpg'
-import ImgCorso8 from '../img/immagini per section1/8corso.jpg'
+import ImgCorso1 from '../../img/immagini per section1/1corsoLiberta.jpg'
+import ImgCorso2 from '../../img/immagini per section1/2corso.jpg'
+import ImgCorso3 from '../../img/immagini per section1/3corso.jpg'
+import ImgCorso4 from '../../img/immagini per section1/4corso.jpg'
+import ImgCorso5 from '../../img/immagini per section1/5corso.jpg'
+import ImgCorso6 from '../../img/immagini per section1/6corso.jpg'
+import ImgCorso7 from '../../img/immagini per section1/7corso.jpg'
+import ImgCorso8 from '../../img/immagini per section1/8corso.jpg'
 
 const VecchiCorsiSection1 = () => {
 
