@@ -5,6 +5,10 @@ import imgLink2 from '../img/immagini per link footer/comune novedrate.jpeg'
 import imgLink3 from '../img/immagini per link footer/regione lombardia.png'
 import imgLink4 from '../img/immagini per link footer/protezione civile como.jpeg'
 import imgLink5 from '../img/immagini per link footer/anci lombardia.gif'
+import img1 from '../img/immagini per section1/DCS_4417.JPG'
+import img2 from '../img/immagini per section1/DSC_9203.JPG allievi nespoli jacchetti lesce_gruppo.JPG'
+import img3 from '../img/immagini per section1/DSCF6003.jpg'
+import img4 from '../img/immagini per section1/IMG_0948.JPG'
 
 const Home = () => {
 
@@ -16,54 +20,70 @@ const Home = () => {
                 <div id = 'introduzione'>
                     <h1>Studenti con le Stellette</h1>
                     <h3>Scuola civica in stile militare</h3>
-                    <p className = 'm-0'>la settimana che ti svolterà la vita</p>
+                    <p>la settimana che ti svolterà la vita</p>
                 </div>
             </div>
             
             <article id = 'articole1'>
+                
                 <h5>Che cosa ti proponiamo in questo progetto</h5>
-                <div>
-                    <p>
-                        Durante il progetto, gli allievi del corso prenderanno parte a attività formative multidisciplinari 🎓, pensate per sviluppare competenze pratiche e consapevolezza civica.
-                    </p>   
+                <section id = 'mixGroup'>
+
+                    <div className = 'groupImg'>
+                        <img src = {img1} alt="" />
+                        <img src = {img2} alt="" />
+                    </div>
+
+                    <div id = 'articole1Text'>
+                        <p>
+                            Durante il progetto, gli allievi del corso prenderanno parte a attività formative multidisciplinari 🎓, pensate per sviluppare competenze pratiche e consapevolezza civica.
+                            </p>   
+                                    
+                            <p>
+                                Il percorso includerà moduli dedicati alla sicurezza stradale e personale 🚦🛡️, al primo soccorso 🚑, alla prevenzione e gestione dei rischi legati a eventi e disastri naturali 🌍⚠️, 
+                                oltre a numerose altre attività formative volte a preparare i partecipanti ad affrontare situazioni di emergenza e di vita quotidiana in modo responsabile e consapevole...
+                            </p> 
+                            
+                            <Link to={'/ChiSiamo'}>
+                                <button>Leggi di piu'</button>
+                            </Link> 
+                    </div>
                         
-                    <p>
-                        Il percorso includerà moduli dedicati alla sicurezza stradale e personale 🚦🛡️, al primo soccorso 🚑, alla prevenzione e gestione dei rischi legati a eventi e disastri naturali 🌍⚠️, 
-                        oltre a numerose altre attività formative volte a preparare i partecipanti ad affrontare situazioni di emergenza e di vita quotidiana in modo responsabile e consapevole...
-                    </p>  
-                    
-                    <Link to={'/ChiSiamo'}>
-                        <button>Leggi di piu'</button>
-                    </Link>              
-                </div>
+                    <div className = 'groupImg'>
+                        <img src = {img3} alt="" />
+                        <img src = {img4} alt="" />
+                    </div>
+                </section>
             </article>
 
             <article id = 'articole2'>
                 <h5> L’esperienza sotto la lente d’ingrandimento</h5>
                 
-                <iframe 
-                    width="100%" 
-                    height="391" 
-                    src="https://www.youtube.com/embed/w_ZsGiLbCOc" 
-                    title="Studenti con le Stellette, il racconto..." 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" 
-                    allowfullscreen>
-                </iframe> 
+                <div>
+                    <iframe 
+                        width="100%" 
+                        height="391" 
+                        src="https://www.youtube.com/embed/w_ZsGiLbCOc" 
+                        title="Studenti con le Stellette, il racconto..." 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen
+                        id = 'articole2Iframe'
+                        >
+                    </iframe> 
 
-                <div id = 'brochureArticole2'>
-                    <p>
-                        Se vuoi consultare la Broschure riguardante il "X corso Audacia" scarica il PDF:
-                        <a 
-                            href="/PDF/Brochure-2025.PDF"
-                            download
-                            class="btn btn-primary mt-3">
-                            Clicca per il PDF
-                        </a>                        
-                    </p>
-
-
+                    <div id = 'brochureArticole2'>
+                        <p>
+                            Se vuoi consultare la Broschure riguardante il "X corso Audacia" scarica il PDF:
+                            <a 
+                                href="/PDF/Brochure-2025.PDF"
+                                download
+                                class="btn btn-primary mt-3">
+                                Clicca per il PDF
+                            </a>                        
+                        </p>
+                    </div>
                 </div>
             </article>
 
