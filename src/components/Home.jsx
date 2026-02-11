@@ -59,7 +59,7 @@ const Home = () => {
             <article id = 'articole2'>
                 <h5> L’esperienza sotto la lente d’ingrandimento</h5>
                 
-                <div>
+                <div className = 'articole2Div'>
                     <iframe 
                         width="100%" 
                         height="391" 

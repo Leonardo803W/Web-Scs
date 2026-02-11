@@ -9,9 +9,9 @@ const ChiSiamoSection1 = () => {
                 <div id = 'nascita'>
 
                     <div>
-                        <h3 className = 'm-0 p-1'>Chi siamo:</h3>
+                        <h3>Chi siamo:</h3>
 
-                        <p className = 'm-0 p-1'>
+                        <p>
                             L'Associazione Studenti con le stellette e nata nel 2016, inizialmente creata dai reduci di guerra,
                             cosi come altre associazioni, infatti basandosi su associazioni come associazione combattentistiche d'arma (Associazione Nazionale Carabinieri, Marinai d’Italia, Associazione Nazionale Alpini).
                         </p>                          
@@ -22,9 +22,9 @@ const ChiSiamoSection1 = () => {
                 <div id = 'mission'>
 
                     <div>
-                        <h3 className = 'm-0 p-1'>La nostra mission:</h3>
+                        <h3>La nostra mission:</h3>
 
-                        <p className = 'm-0 p-1'>
+                        <p>
                             La missione che l'Associazione si e posta e quello di poter dare agli allievi che aderiscono a questa iniziativa,
                             per poter dare agli allievi nozioni tramite lezioni teoriche ma anche pratiche, ma sopratutto tramite il regolamento e la disciplina data,
                             per poter far si che alla fine del corso l'allievo possa essere anche una persona non solo disciplinata ma anche un cittadino attivo tramite il senso civico che viene trasmesso durantre il corso.
@@ -35,9 +35,9 @@ const ChiSiamoSection1 = () => {
                 <div id = 'progetto'>
 
                     <div>
-                        <h3 className = 'm-0 p-1'>Che cosa l'allievo si porta a casa da questo progetto:</h3>
+                        <h3>Che cosa l'allievo si porta a casa da questo progetto:</h3>
 
-                        <p className = 'm-0 p-1'>
+                        <p>
                             Il nostro corso non si limita alla formazione teorica: ogni attività è pensata per sviluppare competenze pratiche, consapevolezza e senso di responsabilità. Gli studenti avranno la possibilità di:
 
                             Apprendere tecniche di primo soccorso e BLSD Laico, fondamentali per la sicurezza personale e collettiva.
