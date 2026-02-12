@@ -3,7 +3,7 @@ const IscrizioniSection1 = () => {
     return(
         <>
             <section>
-                <h1 className = 'm-3'>Iscrizioni</h1>
+                <h1>Iscrizioni</h1>
                 <hr />
 
                 <div id = "introIscrizioni">
@@ -15,7 +15,7 @@ const IscrizioniSection1 = () => {
                     </p>
                 </div>
 
-                <p className = "m-5 p4">
+                <p className = "moduloInteresse">
                     In caso di interesse per avere ulteriori aggiornamenti per eventuali procedure effettive o per info,
                     compilare il "Modulo di interesse" &rarr;
 

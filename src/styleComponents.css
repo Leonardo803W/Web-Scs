@@ -360,7 +360,7 @@
   .groupImg {
     display: flex;
     flex-direction: column;
-    width: 150%;
+    width: 90%;
   }
 
   .groupImg img{
@@ -413,16 +413,16 @@
 }
 
 #nascita div{
-  background-color: #ffffffad;
-  padding: 1rem;
-  margin-left: 11rem;
-  border-radius: 8rem 0rem 0rem 8rem;
-  text-align: end;
-  width: 57%;
+  background-color: #ffffffe0;
+  padding: 1rem 0rem 1rem 1rem;
+  margin-left: clamp(8rem, 10vw, 14rem);
+  border-radius: 8rem 0rem 0rem 0rem;
+  text-align: center;
+  width: 100%;
 }
 
 #mission{
-  background-image: url('./img/immagini\ per\ section1/DSC_0204.JPG');
+  background-image: url('./img/immagini\ per\ section1/immagine bacrground second div section chi siamo.jpg');
   background-size: 28rem 18rem;
   background-position: bottom;
   height: 24rem;
@@ -468,9 +468,39 @@
 
 #groupVideo iframe{
   width: 100%;
+  padding: 1rem;
+  background-color: #666149;
+  border-radius: 0rem 1rem 0rem 1rem;
   height: 12rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+}
+
+/*query chiSiamo per tablet*/
+
+@media (min-width: 426px) {
+
+  #nascita {
+    background-position-y: -8rem;
+  }
+
+  #nascita div {
+    margin-left: 27rem;
+  }
+
+  #mission {
+    background-position: unset;
+    background-position-y: 2rem;
+    background-size: 48rem 31rem;
+    height: 29rem;
+  }
+
+  #progetto {
+    background-position-x: 0rem;
+    padding: 6rem;
+  }
+
+  #groupVideo iframe {
+    height: 25rem;
+  }
 }
 
 /*css IscrizioniSection1*/
@@ -481,16 +511,32 @@
   height: 21rem;
   margin-bottom: 1rem;
   margin-top: 1rem;
-  padding: 4rem 0rem 0rem 8rem;
+  padding-top: 5rem;
 }
 
 #introIscrizioni p{
   background-color: #ffffffab;
-  margin: 0;
-  padding: 0.5rem;
-  font-size: small;
-  color: black;
+  margin-left: clamp(6rem, 30vw, 8rem);
+  padding: 1rem;
   border-radius: 2rem 0rem 0rem 2rem;
+}
+
+.moduloInteresse{
+  padding: 2rem;
+  background-color: #f0e4d4;
+  margin: 1rem;
+  border-radius: 1rem;
+}
+
+/*query IscrizioniSection1 per tablet*/
+
+@media (min-width: 426px) {
+
+  #introIscrizioni {
+    height: 26rem;
+    padding-top: 1rem;
+  }
+
 }
 
 /*css VecchiCorsiSection1*/
@@ -507,11 +553,9 @@
   margin-bottom: 1rem;
   margin-right: 4rem;
   background-color: #46a346;
-  padding: 1rem;
   border-radius: 0rem 5rem 6rem 1rem;
   transform: skewX(10deg);
   box-shadow: -25px 0px 20px 4px;
-  font-size: small;
   z-index: -1;
   position: relative;
 }
