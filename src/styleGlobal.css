@@ -20,6 +20,10 @@ a {
   text-decoration: none;
 }
 
+#collaborationBigSection{
+  min-height: 36rem;
+}
+
 /*query per css globale tablet*/
 
 @media (min-width: 426px) {

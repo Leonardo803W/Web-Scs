@@ -38,6 +38,7 @@
   background-color: #000000;
   width: 100%;
   height: 100%;
+  z-index: 3;
 }
 
 #itemNavbarClose{
@@ -539,25 +540,117 @@
 
 }
 
+/*css Collaborazioni*/
+
+#collaboration{
+  background-image: url('././img/immagini\ per\ section1/DSC_2429.JPG');
+  background-size: 68rem 35rem;
+  padding: 0.5rem;
+  background-position-x: -39rem;
+}
+
+#firstDiv, #secondDiv{
+  margin: 1rem 1rem 1rem 1rem;
+  padding: 0.5rem;
+  background-color: #ffffffdb;
+  text-align: center;
+  border-radius: 1rem;
+}
+
+#firstDiv{
+  margin: 1rem 1rem 10rem 1rem;
+}
+
+/*query Collaborazioni per tablet*/
+
+@media (min-width: 426px) {
+
+  #collaboration{
+    background-size: cover;
+    background-position-x: 0;
+  }
+
+}
+
 /*css VecchiCorsiSection1*/
 
 .vecchiCorsiSinistra h5{
   margin: 1rem;
 }
 
-.vecchiCorsiSinistra img{
+.vecchiCorsiDestra h5{
+  margin: 1rem;
+  text-align: end;
+}
+
+.vecchiCorsiSinistra img, .vecchiCorsiDestra img{
   width: 100%;
 }
 
-.vecchiCorsiSinistra p{
+.vecchiCorsiSinistra p, .vecchiCorsiDestra p{
+  text-align: center;
   margin-bottom: 1rem;
-  margin-right: 4rem;
   background-color: #46a346;
-  border-radius: 0rem 5rem 6rem 1rem;
+}
+
+.vecchiCorsiSinistra p{
+  margin-right: 3rem;
+  border-radius: 0rem 3rem 3rem 3rem;
   transform: skewX(10deg);
   box-shadow: -25px 0px 20px 4px;
-  z-index: -1;
-  position: relative;
+}
+
+.vecchiCorsiDestra p{
+  margin-left: 3rem;
+  border-radius: 2rem 0rem 3rem 3rem;
+  transform: skewX(347deg);
+  box-shadow: 25px 0px 20px 4px;
+}
+
+.articoleCorsi{
+  display: block;
+}
+
+.articoleCorsi hr{
+  display: block;
+}
+
+.hrCorsiTablet{
+  display: none;
+}
+
+/*query VecchiCorsiSection1 per tablet*/
+
+@media (min-width: 426px) {
+
+  .vecchiCorsiSinistra{
+    width: 50%;
+    padding-right: 1rem;
+    border-right: 1px solid black;
+    margin-left: 1rem;
+  }
+
+  .vecchiCorsiDestra{
+    width: 45%;
+    padding-left: 1rem;
+  }
+
+  .articoleCorsi{
+    display: flex;
+  }
+
+  .articoleCorsi hr{
+    display: none;
+  }
+
+  .hrCorsiTablet{
+    display: block;
+  }
+
+  .vecchiCorsiSinistra p, .vecchiCorsiDestra p{
+    padding: 1rem;
+    min-height: 16rem;
+  }
 }
 
 /*css ContattiSection1*/
