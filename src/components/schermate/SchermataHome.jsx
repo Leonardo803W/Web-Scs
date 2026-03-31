@@ -1,78 +1,47 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-
-import GlobalFooterScs from "../GlobalFooterScs";
+import { useEffect, useState } from "react";
 import GlobalNavbarScs from "../GlobalNavbarScs";
+import GlobalFooterScs from "../GlobalFooterScs";
 import Home from "../Home";
+import imgLogo from "../../img/logo-scs-02.png";
 
 const SchermataHome = () => {
+  const [isLoading, setIsLoading] = useState(true);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
 
-    const [menuShow, setMenuShow] = useState (false);
-    
-    const handleMenu = (n) => {
-    
-        if(n === 1)
-        {
-            setMenuShow(true)
-            //console.log(menuShow)
-        }
-        else
-        {
-            setMenuShow(false)
-            //console.log(menuShow)
-        }
-    }
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 5000);
 
-    return(
-        <>
-            <div className = {menuShow ? 'showMenuOn' : 'showmenuOf'}>
-                <div className = "d-flex justify-content-between">
-                    <p className = "itemP">Menu:</p>
-                    <p id = "itemNavbarClose" onClick = {() => handleMenu(2)}>&times;</p>
-                </div>
-                <hr className = "itemHr"/>
-                <div className = "ps-4">
-                    <Link to={'/'}>
-                        <p className = "itemP">Home</p>
-                    </Link>
-                    <hr className = "itemHr"/>                    
-                    <Link to={'/ChiSiamo'}>
-                        <p className = "itemP">Chi siamo</p>
-                    </Link>
-                    <hr className = "itemHr"/>
-                    <Link to={'/Iscrizioni'}>
-                        <p className = "itemP">Iscrizioni</p>
-                    </Link>
-                    <hr className = "itemHr"/>
-                    <Link to={'/Collaborazioni'}>
-                        <p className = "itemP">Collaborazioni</p>
-                    </Link>
-                    <hr className = "itemHr"/>
-                    <Link to={'/VecchiCorsi'}>
-                        <p className = "itemP">Vecchi corsi</p>
-                    </Link>
-                    <hr className = "itemHr"/>
-                    <Link to={'/Contatti'}>
-                        <p className = "itemP">Contatti</p>
-                    </Link>
-                    <hr className = "itemHr"/>
-                </div>
-            </div>
+    return () => clearTimeout(timer);
+  }, []);
 
-            <header>
-                <GlobalNavbarScs triggerAlert = {handleMenu}/>
-            </header>
-            
-            <main>
-                <Home/>
-            </main>
+  useEffect(() => {
+    document.body.style.overflow = isLoading ? "hidden" : "";
+  }, [isLoading]);
 
-            <footer>
-                <GlobalFooterScs/>
-            </footer>
-        </>
-    )
-}
+  return (
+    <>
+      <GlobalNavbarScs />
+
+      <main>
+        {isLoading && (
+          <div className="intro">
+            {[1, 2, 3].map(i => (
+              <div key={i} className={`intro__logo intro__logo--${i}`}>
+                <img src={imgLogo} alt="logo" />
+              </div>
+            ))}
+          </div>
+        )}
+
+        {!isLoading && <Home />}
+      </main>
+
+      {!isLoading && <GlobalFooterScs />}
+    </>
+  );
+};
 
 export default SchermataHome;

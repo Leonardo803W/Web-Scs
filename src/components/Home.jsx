@@ -1,106 +1,162 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import imgLink1 from '../img/immagini per link footer/ecampus.png'
-import imgLink2 from '../img/immagini per link footer/comune novedrate.jpeg'
-import imgLink3 from '../img/immagini per link footer/regione lombardia.png'
-import imgLink4 from '../img/immagini per link footer/protezione civile como.jpeg'
-import imgLink5 from '../img/immagini per link footer/anci lombardia.gif'
-import img1 from '../img/immagini per section1/DCS_4417.JPG'
-import img2 from '../img/immagini per section1/DSC_9203.JPG allievi nespoli jacchetti lesce_gruppo.JPG'
-import img3 from '../img/immagini per section1/DSCF6003.jpg'
-import img4 from '../img/immagini per section1/IMG_0948.JPG'
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
+import img1 from "../img/immagini per section1/DCS_4417.JPG";
+import img2 from "../img/immagini per section1/DSC_9203.JPG allievi nespoli jacchetti lesce_gruppo.JPG";
+import img3 from "../img/immagini per section1/DSCF6003.jpg";
+import img4 from "../img/immagini per section1/IMG_0948.JPG";
+import imgNoBg from "../img/IMG_0622 no sfondo.png";
+
+import imgLink1 from "../img/immagini per link footer/ecampus.png";
+import imgLink2 from "../img/immagini per link footer/comune novedrate.jpeg";
+import imgLink3 from "../img/immagini per link footer/regione lombardia.png";
+import imgLink4 from "../img/immagini per link footer/protezione civile como.jpeg";
+import imgLink5 from "../img/immagini per link footer/anci lombardia.gif";
+
+const fadeIn = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
+};
 
 const Home = () => {
+  return (
+    <main className="home">
+      
+      {/* HERO */}
+      <section className="hero">
+        <div className="hero__content">
+          <h1>Studenti con le Stellette</h1>
+          <h2>Scuola civica in stile militare</h2>
+          <p>La settimana che ti svolterà la vita</p>
+        </div>
+      </section>
 
-    return(
-        <>
-        <section id = 'section1'>
+      {/* SEZIONE INFO */}
+      <motion.section
+        className="section section--info"
+        variants={fadeIn}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <h3 className="section__title">
+          Che cosa ti proponiamo in questo progetto
+        </h3>
 
-            <div id = 'intro'>
-                <div id = 'introduzione'>
-                    <h1>Studenti con le Stellette</h1>
-                    <h3>Scuola civica in stile militare</h3>
-                    <p>la settimana che ti svolterà la vita</p>
-                </div>
+        <div className="section__grid">
+
+          {/* immagini sinistra */}
+          <div className="section__images">
+            <img src={img1} alt="attività formativa" />
+            <img src={img2} alt="gruppo studenti" />
+          </div>
+
+          {/* contenuto centrale */}
+          <div className="section__content">
+            <div className="section__text-wrapper">
+              <img src={imgNoBg} alt="logo decorativo" className="section__cover" />
+
+              <p>
+                Durante il progetto, gli allievi parteciperanno ad attività
+                formative multidisciplinari 🎓 per sviluppare competenze pratiche
+                e consapevolezza civica. Il percorso includerà sicurezza stradale
+                e personale 🚦🛡️, primo soccorso 🚑 e gestione dei rischi legati
+                a eventi e disastri naturali 🌍⚠️, preparando i partecipanti ad
+                affrontare situazioni di emergenza e la vita quotidiana in modo
+                responsabile.
+              </p>
             </div>
-            
-            <article id = 'articole1'>
-                
-                <h5>Che cosa ti proponiamo in questo progetto</h5>
-                <section id = 'mixGroup'>
 
-                    <div className = 'groupImg'>
-                        <img src = {img1} alt="" />
-                        <img src = {img2} alt="" />
-                    </div>
+            <Link to="/ChiSiamo" className="btn">
+              Leggi di più
+            </Link>
+          </div>
 
-                    <div id = 'articole1Text'>
-                        <p>
-                            Durante il progetto, gli allievi del corso prenderanno parte a attività formative multidisciplinari 🎓, pensate per sviluppare competenze pratiche e consapevolezza civica.
-                            </p>   
-                                    
-                            <p>
-                                Il percorso includerà moduli dedicati alla sicurezza stradale e personale 🚦🛡️, al primo soccorso 🚑, alla prevenzione e gestione dei rischi legati a eventi e disastri naturali 🌍⚠️, 
-                                oltre a numerose altre attività formative volte a preparare i partecipanti ad affrontare situazioni di emergenza e di vita quotidiana in modo responsabile e consapevole...
-                            </p> 
-                            
-                            <Link to={'/ChiSiamo'}>
-                                <button>Leggi di piu'</button>
-                            </Link> 
-                    </div>
-                        
-                    <div className = 'groupImg'>
-                        <img src = {img3} alt="" />
-                        <img src = {img4} alt="" />
-                    </div>
-                </section>
-            </article>
+          {/* immagini destra */}
+          <div className="section__images">
+            <img src={img3} alt="attività pratica" />
+            <img src={img4} alt="esercitazione" />
+          </div>
+        </div>
+      </motion.section>
 
-            <article id = 'articole2'>
-                <h5> L’esperienza sotto la lente d’ingrandimento</h5>
-                
-                <div className = 'articole2Div'>
-                    <iframe 
-                        width="100%" 
-                        height="391" 
-                        src="https://www.youtube.com/embed/w_ZsGiLbCOc" 
-                        title="Studenti con le Stellette, il racconto..." 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        id = 'articole2Iframe'
-                        >
-                    </iframe> 
+      {/* VIDEO + PDF */}
+      <motion.section
+        className="section section--media"
+        variants={fadeIn}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <h3 className="section__title">
+          L’esperienza sotto la lente d’ingrandimento
+        </h3>
 
-                    <div id = 'brochureArticole2'>
-                        <p>
-                            Se vuoi consultare la Broschure riguardante il "X corso Audacia" scarica il PDF:
-                            <a 
-                                href="/PDF/Brochure-2025.PDF"
-                                download
-                                class="btn btn-primary mt-3">
-                                Clicca per il PDF
-                            </a>                        
-                        </p>
-                    </div>
-                </div>
-            </article>
+        <div className="section__media">
 
-            <article id = 'articole4'>
-                <h5>Con chi collaboriamo?</h5>
-                <div id = 'group-loghi'>
-                    <a href="https://www.uniecampus.it"><img src = {imgLink1} alt = "logo ecampus" className = 'loghi-link-collaborazioni'/></a>
-                    <a href="https://www.comune.novedrate.co.it/it"><img src = {imgLink2} alt = "logo comune novedrate" className = 'loghi-link-collaborazioni'/></a>
-                    <a href="https://www.regione.lombardia.it/wps/portal/istituzionale"><img src = {imgLink3} alt = "logo regione lombardia" className = 'loghi-link-collaborazioni'/></a>
-                    <a href="https://www.facebook.com/ProtezioneCivileComo"><img src = {imgLink4} alt = "logo protezione civile como" className = 'loghi-link-collaborazioni'/></a>
-                    <a href="https://anci.lombardia.it"><img src = {imgLink5} alt = "logo anci lombardia" className = 'loghi-link-collaborazioni'/></a>
-                </div>
-            </article>
+          <div className="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/w_ZsGiLbCOc"
+              title="Studenti con le Stellette"
+              allowFullScreen
+            />
+          </div>
 
-            </section>
-        </>
-    )
-}
+          <div className="section__pdf">
+            <p>
+              Se vuoi consultare la brochure del "X corso Audacia", scarica il PDF:
+            </p>
+
+            <a
+              href="/PDF/Brochure-2025.PDF"
+              download
+              className="btn"
+            >
+              Scarica PDF
+            </a>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* COLLABORAZIONI */}
+      <motion.section
+        className="section section--partners"
+        variants={fadeIn}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <h3 className="section__title">Con chi collaboriamo?</h3>
+
+        <div className="partners">
+          <a href="https://www.uniecampus.it">
+            <img src={imgLink1} alt="eCampus" />
+          </a>
+
+          <a href="https://www.comune.novedrate.co.it/it">
+            <img src={imgLink2} alt="Comune Novedrate" />
+          </a>
+
+          <a href="https://www.regione.lombardia.it">
+            <img src={imgLink3} alt="Regione Lombardia" />
+          </a>
+
+          <a href="https://www.facebook.com/ProtezioneCivileComo">
+            <img src={imgLink4} alt="Protezione Civile Como" />
+          </a>
+
+          <a href="https://anci.lombardia.it">
+            <img src={imgLink5} alt="ANCI Lombardia" />
+          </a>
+        </div>
+      </motion.section>
+
+    </main>
+  );
+};
 
 export default Home;

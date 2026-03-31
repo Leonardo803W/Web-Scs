@@ -1,69 +1,67 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import img1 from '../img/logo-scs-02.png'
+import imgLogo from "../img/logo-scs-02.png";
 
-const GlobalNavbarScs = ({ triggerAlert }) => {
+const NAV_LINKS = [
+  { to: "/", label: "Home" },
+  { to: "/ChiSiamo", label: "Chi siamo" },
+  { to: "/Iscrizioni", label: "Iscrizioni" },
+  { to: "/Collaborazioni", label: "Collaborazioni" },
+  { to: "/VecchiCorsi", label: "Vecchi corsi" },
+  { to: "/Contatti", label: "Contatti" },
+];
 
-    const handelAlert = (n) => {
-        
-        triggerAlert(1);
-    }
+const GlobalNavbarScs = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-    return(
-        <>
-        <section id='navbar'>
-            <div id = "navbarPhone">
-                <p onClick = {() => handelAlert(1)} id = "navbarMenu">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-                    </svg>
-                </p>
-                <Link to={'/'}>
-                    <img src = {img1} alt = "logo sito" id = 'navbarlogo'/>
-                </Link>
-                <p>login</p>
-            </div>
-            
-        
-            <div id = "navbarLaptop">
-                <div className = "item-content">
-                    <Link to={'/'} className = "item-conteLink">
-                        <p className = 'item-navbar'>Home</p>
-                    </Link>
-                </div>    
+  const toggleMenu = () => setIsOpen(prev => !prev);
+  const closeMenu = () => setIsOpen(false);
 
-                <div className = "item-content">
-                    <Link to={'/ChiSiamo'} className = "item-conteLink">
-                        <p className = 'item-navbar'>Chi siamo</p>
-                    </Link>
-                </div>
-                
-                <div className = "item-content">
-                    <Link to={'/Iscrizioni'} className = "item-conteLink">
-                        <p className = 'item-navbar'>Iscrizioni</p>
-                    </Link>
-                </div>
+  return (
+    <header className="navbar">
+      {/* Mobile */}
+      <div className="navbar__mobile">
+        <button onClick={toggleMenu} className="navbar__menu-btn">
+          ☰
+        </button>
 
-                <div className = "item-content">
-                    <Link to={'/Collaborazioni'} className = "item-conteLink">
-                        <p className = 'item-navbar'>Collaborazioni</p>
-                    </Link>
-                </div>
+        <Link to="/" className="navbar__logo">
+          <img src={imgLogo} alt="logo" />
+        </Link>
 
-                <div className = "item-content">
-                    <Link to={'/VecchiCorsi'} className = "item-conteLink">
-                        <p className = 'item-navbar'>Vecchi Corsi</p>
-                    </Link>
-                </div>
+        <button className="navbar__login">Login</button>
+      </div>
 
-                <div className = "item-content">
-                    <Link to={'/Contatti'} className = "item-conteLink">
-                        <p className = 'item-navbar'>Contatti</p>
-                    </Link>
-                </div>
-            </div> 
-        </section>
-        </>
-    )
-}
+      {/* Mobile menu */}
+      <nav className={`mobile-menu ${isOpen ? "is-open" : ""}`}>
+        <div className="mobile-menu__header">
+          <span>Menu</span>
+          <button onClick={closeMenu}>✕</button>
+        </div>
+
+        <ul>
+          {NAV_LINKS.map(link => (
+            <li key={link.to}>
+              <Link to={link.to} onClick={closeMenu}>
+                {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      {/* Desktop */}
+      <nav className="navbar__desktop">
+        <ul>
+          {NAV_LINKS.map(link => (
+            <li key={link.to}>
+              <Link to={link.to}>{link.label}</Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
+  );
+};
 
 export default GlobalNavbarScs;
