@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import imgLogo from "../img/logo-scs-02.png";
 
@@ -14,18 +14,22 @@ const NAV_LINKS = [
 const GlobalNavbarScs = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    console.log(isOpen)
+  })
+
   const toggleMenu = () => setIsOpen(prev => !prev);
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <header className="navbar">
+    <header className = "navbar">
       {/* Mobile */}
-      <div className="navbar__mobile">
-        <button onClick={toggleMenu} className="navbar__menu-btn">
+      <div className = "navbar__mobile">
+        <button onClick={toggleMenu} className = "navbar__menu-btn">
           ☰
         </button>
 
-        <Link to="/" className="navbar__logo">
+        <Link to="/" className = "navbar__logo">
           <img src={imgLogo} alt="logo" />
         </Link>
 
@@ -33,16 +37,16 @@ const GlobalNavbarScs = () => {
       </div>
 
       {/* Mobile menu */}
-      <nav className={`mobile-menu ${isOpen ? "is-open" : ""}`}>
-        <div className="mobile-menu__header">
+      <nav className = {isOpen ? "is-open" : "d-none"}>
+        <div className = "mobile-menu-header">
           <span>Menu</span>
-          <button onClick={closeMenu}>✕</button>
+          <p onClick={closeMenu}>✕</p>
         </div>
 
         <ul>
           {NAV_LINKS.map(link => (
             <li key={link.to}>
-              <Link to={link.to} onClick={closeMenu}>
+              <Link to={link.to} className = "link">
                 {link.label}
               </Link>
             </li>
@@ -51,7 +55,7 @@ const GlobalNavbarScs = () => {
       </nav>
 
       {/* Desktop */}
-      <nav className="navbar__desktop">
+      <nav className = "navbar__desktop">
         <ul>
           {NAV_LINKS.map(link => (
             <li key={link.to}>

@@ -26,41 +26,37 @@ const Home = () => {
   return (
     <main className="home">
       
-      {/* HERO */}
-      <section className="hero">
-        <div className="hero__content">
+      <section className = "hero">
+        <div className = "hero__content">
           <h1>Studenti con le Stellette</h1>
           <h2>Scuola civica in stile militare</h2>
           <p>La settimana che ti svolterà la vita</p>
         </div>
       </section>
 
-      {/* SEZIONE INFO */}
       <motion.section
-        className="section section--info"
+        className="section-articole1"
         variants={fadeIn}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
-        <h3 className="section__title">
+        <h3 className = "title-articole1">
           Che cosa ti proponiamo in questo progetto
         </h3>
 
         <div className="section__grid">
 
-          {/* immagini sinistra */}
           <div className="section__images">
-            <img src={img1} alt="attività formativa" />
-            <img src={img2} alt="gruppo studenti" />
+            <img src={img1} alt="attività formativa" id = "imgDesktopHome1"/>
+            <img src={img2} alt="gruppo studenti" id = "imgDesktopHome2"/>
           </div>
 
-          {/* contenuto centrale */}
-          <div className="section__content">
-            <div className="section__text-wrapper">
-              <img src={imgNoBg} alt="logo decorativo" className="section__cover" />
+          <div className=" text-center">
+            <div className = "d-flex">
+              <img src={imgNoBg} alt="logo decorativo" className = "articole1-cover" />
 
-              <p>
+              <p className = "articole1-text">
                 Durante il progetto, gli allievi parteciperanno ad attività
                 formative multidisciplinari 🎓 per sviluppare competenze pratiche
                 e consapevolezza civica. Il percorso includerà sicurezza stradale
@@ -71,22 +67,21 @@ const Home = () => {
               </p>
             </div>
 
-            <Link to="/ChiSiamo" className="btn">
+            <Link to="/ChiSiamo" className = "btn articole1-button">
               Leggi di più
             </Link>
           </div>
 
-          {/* immagini destra */}
           <div className="section__images">
-            <img src={img3} alt="attività pratica" />
-            <img src={img4} alt="esercitazione" />
+            <img src={img3} alt="attività pratica" id = "imgDesktopHome3"/>
+            <img src={img4} alt="esercitazione" id = "imgDesktopHome4"/>
           </div>
         </div>
       </motion.section>
 
       {/* VIDEO + PDF */}
       <motion.section
-        className="section section--media"
+        className = "section--media"
         variants={fadeIn}
         initial="hidden"
         whileInView="visible"
@@ -106,7 +101,7 @@ const Home = () => {
             />
           </div>
 
-          <div className="section__pdf">
+          <div className = "section_pdf">
             <p>
               Se vuoi consultare la brochure del "X corso Audacia", scarica il PDF:
             </p>
@@ -122,9 +117,8 @@ const Home = () => {
         </div>
       </motion.section>
 
-      {/* COLLABORAZIONI */}
       <motion.section
-        className="section section--partners"
+        className = "text-center p-3"
         variants={fadeIn}
         initial="hidden"
         whileInView="visible"
