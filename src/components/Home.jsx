@@ -1,11 +1,5 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-
-import img1 from "../img/immagini per section1/DCS_4417.JPG";
-import img2 from "../img/immagini per section1/DSC_9203.JPG allievi nespoli jacchetti lesce_gruppo.JPG";
-import img3 from "../img/immagini per section1/DSCF6003.jpg";
-import img4 from "../img/immagini per section1/IMG_0948.JPG";
-import imgNoBg from "../img/IMG_0622 no sfondo.png";
+//import { ChevronRight } from "lucide-react";
 
 import imgLink1 from "../img/immagini per link footer/ecampus.png";
 import imgLink2 from "../img/immagini per link footer/comune novedrate.jpeg";
@@ -23,60 +17,101 @@ const fadeIn = {
 };
 
 const Home = () => {
+
+  const currentYear = new Date().getFullYear();
+  
   return (
     <main className="home">
       
       <section className = "hero">
-        <div className = "hero__content">
-          <h1>Studenti con le Stellette</h1>
-          <h2>Scuola civica in stile militare</h2>
-          <p>La settimana che ti svolterà la vita</p>
-        </div>
+        <h1>Oltre i tuoi limiti.</h1>
+        <h2>Sotto le stellette.</h2>
+        <p>La settimana che ti svolterà la vita. Disciplina, coraggio e spirito di squadra.</p>
       </section>
 
+      <motion.div
+        variants={fadeIn}
+        className="flex flex-col sm:flex-row gap-6 justify-center mb-20"
+        >
+        <a
+          href="#features"
+          className="group inline-flex items-center gap-2 text-accent hover:text-accent/80 transition font-medium text-lg"
+        >
+          Scopri il progetto
+        </a>
+        <a
+          href="#diary"
+          className="group inline-flex items-center gap-2 text-accent hover:text-accent/80 transition font-medium text-lg"
+        >
+        Guarda il racconto
+        </a>
+      </motion.div>
+
       <motion.section
-        className="section-articole1"
         variants={fadeIn}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
-        <h3 className = "title-articole1">
-          Che cosa ti proponiamo in questo progetto
-        </h3>
-
-        <div className="section__grid">
-
-          <div className="section__images">
-            <img src={img1} alt="attività formativa" id = "imgDesktopHome1"/>
-            <img src={img2} alt="gruppo studenti" id = "imgDesktopHome2"/>
-          </div>
-
-          <div className=" text-center">
-            <div className = "d-flex">
-              <img src={imgNoBg} alt="logo decorativo" className = "articole1-cover" />
-
-              <p className = "articole1-text">
-                Durante il progetto, gli allievi parteciperanno ad attività
-                formative multidisciplinari 🎓 per sviluppare competenze pratiche
-                e consapevolezza civica. Il percorso includerà sicurezza stradale
-                e personale 🚦🛡️, primo soccorso 🚑 e gestione dei rischi legati
-                a eventi e disastri naturali 🌍⚠️, preparando i partecipanti ad
-                affrontare situazioni di emergenza e la vita quotidiana in modo
-                responsabile.
-              </p>
-            </div>
-
-            <Link to="/ChiSiamo" className = "btn articole1-button">
-              Leggi di più
-            </Link>
-          </div>
-
-          <div className="section__images">
-            <img src={img3} alt="attività pratica" id = "imgDesktopHome3"/>
-            <img src={img4} alt="esercitazione" id = "imgDesktopHome4"/>
-          </div>
+        <div>
+          <h3>
+            Che cosa ti proponiamo in questo progetto
+          </h3>
+          <p>Un percorso formativo multidisciplinare per sviluppare competenze pratiche e consapevolezza civica.📚</p>
         </div>
+        
+        <section>
+          <article>
+            <p>
+              📚
+            </p>
+            <h5>
+              Consapevolezza Civica
+            </h5>
+            <p>
+              Non è solo addestramento. È imparare a essere cittadini migliori attraverso la sicurezza stradale, il primo soccorso e la gestione delle emergenze.
+            </p>
+          </article>
+
+          <article>
+            <p>
+              🤝
+            </p>
+            <h5>
+              Spirito di Corpo
+            </h5>
+            <p>
+              Insieme si vince. Sviluppa legami indissolubili con i tuoi compagni mentre affronti sfide che mettono alla prova la tua determinazione.
+            </p>
+          </article>
+          
+          <article>
+            <p>
+              🚦
+            </p>
+            <h5>
+              Sicurezza Stradale
+            </h5>
+            <p>
+              Impara le regole della strada e sviluppa consapevolezza sui rischi della circolazione stradale per proteggere te stesso e gli altri.
+            </p>
+          </article>
+          
+          <article>
+            <p>
+              🚑
+            </p>
+            <h5>
+              Primo Soccorso
+            </h5>
+            <p>
+              Acquisisce competenze essenziali per intervenire in situazioni di emergenza e salvare vite. Certificazione riconosciuta.
+            </p>
+          </article>
+
+          <button>Scopri di più</button>
+          
+        </section>
       </motion.section>
 
       {/* VIDEO + PDF */}
@@ -117,6 +152,16 @@ const Home = () => {
         </div>
       </motion.section>
 
+      <motion.div variants={fadeIn} className="mb-20">
+            <span className="text-xs uppercase tracking-widest text-accent font-semibold">
+              Il Racconto
+            </span>
+            <h2 className="text-5xl md:text-6xl font-bold mt-3 mb-6">
+              Diario di una settimana diversa.
+            </h2>
+            <div className="h-1 w-12 bg-accent rounded-full" />
+          </motion.div>
+
       <motion.section
         className = "text-center p-3"
         variants={fadeIn}
@@ -148,6 +193,83 @@ const Home = () => {
           </a>
         </div>
       </motion.section>
+
+      <motion.div
+        className = "text-center p-3"
+        variants={fadeIn}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <div className="grid md:grid-cols-3 gap-12 mb-12">
+          {/* Brand */}
+          <div>
+            <h3 className="text-lg font-bold mb-4">SCS</h3>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              Studenti con le Stellette. Un percorso formativo per sviluppare
+              consapevolezza civica e spirito di squadra.
+            </p>
+          </div>
+
+          {/* Links */}
+          <div>
+            <h4 className="font-semibold mb-4">Link Utili</h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>
+                <a href="#hero" className="hover:text-foreground transition">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#features" className="hover:text-foreground transition">
+                  Chi siamo
+                </a>
+              </li>
+              <li>
+                <a href="#diary" className="hover:text-foreground transition">
+                  Racconto
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="hover:text-foreground transition">
+                  Contatti
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="font-semibold mb-4">Contattaci</h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>
+                <a
+                  href="mailto:info@scs.it"
+                  className="hover:text-foreground transition"
+                >
+                  info@scs.it
+                </a>
+              </li>
+              <li>
+                <a href="tel:+39123456789" className="hover:text-foreground transition">
+                  +39 123 456 789
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="h-px bg-border mb-8" />
+
+        {/* Copyright */}
+        <div className="text-center text-sm text-muted-foreground">
+          <p>
+            &copy; {currentYear} Studenti con le Stellette. Tutti i diritti
+            riservati.
+          </p>
+        </div>
+      </motion.div>
 
     </main>
   );

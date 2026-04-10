@@ -12,7 +12,7 @@ const SchermataHome = () => {
           <GlobalNavbarScs/>
         </header>
 
-        <main id = "home-main">
+        <main id = "home-main" className=" bg-black text-light">
           <Home/>
         </main>
 
