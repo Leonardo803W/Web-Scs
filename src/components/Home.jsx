@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-//import { ChevronRight } from "lucide-react";
+import Button from 'react-bootstrap/Button';
 
+import imgFastLink from "../img/DSC_9203.JPG allievi nespoli jacchetti lesce_gruppo.JPG"
 import imgLink1 from "../img/immagini per link footer/ecampus.png";
 import imgLink2 from "../img/immagini per link footer/comune novedrate.jpeg";
 import imgLink3 from "../img/immagini per link footer/regione lombardia.png";
@@ -24,27 +25,39 @@ const Home = () => {
     <main className="home">
       
       <section className = "hero">
-        <h1>Oltre i tuoi limiti.</h1>
-        <h2>Sotto le stellette.</h2>
+        <h1>
+          Oltre i tuoi limiti.
+          <span>Sotto le stellette.</span>
+        </h1>
         <p>La settimana che ti svolterà la vita. Disciplina, coraggio e spirito di squadra.</p>
       </section>
 
       <motion.div
         variants={fadeIn}
-        className="flex flex-col sm:flex-row gap-6 justify-center mb-20"
+        className = "p-3"
         >
-        <a
-          href="#features"
-          className="group inline-flex items-center gap-2 text-accent hover:text-accent/80 transition font-medium text-lg"
-        >
-          Scopri il progetto
-        </a>
-        <a
-          href="#diary"
-          className="group inline-flex items-center gap-2 text-accent hover:text-accent/80 transition font-medium text-lg"
-        >
-        Guarda il racconto
-        </a>
+        <div>
+          <a
+            href="#features"
+            className = "d-block mb-2"
+          >
+            Scopri il progetto
+            <svg xmlns="http://www.w3.org/2000/svg" className = "ms-2" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+            </svg>
+          </a>
+          <a
+            href="#diary"
+            className = "d-block mb-2"
+          >
+          Guarda il racconto
+          <svg xmlns="http://www.w3.org/2000/svg" className = "ms-2" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+          </svg>
+          </a>
+        </div>
+
+        <img src = {imgFastLink} alt = "foto gruppo" className = "imgFastLink"/>
       </motion.div>
 
       <motion.section
@@ -52,19 +65,20 @@ const Home = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
+        className = "mt-4"
       >
-        <div>
-          <h3>
+        <div id = "intro-project">
+          <h3 className = "pb-2 ps-3">
             Che cosa ti proponiamo in questo progetto
           </h3>
-          <p>Un percorso formativo multidisciplinare per sviluppare competenze pratiche e consapevolezza civica.📚</p>
+          <p className = "pb-2 ps-3">Un percorso formativo multidisciplinare per sviluppare competenze pratiche e consapevolezza civica.📚</p>
         </div>
         
         <section>
-          <article>
-            <p>
+          <article className = "articole-value">
+            <span>
               📚
-            </p>
+            </span>
             <h5>
               Consapevolezza Civica
             </h5>
@@ -73,10 +87,10 @@ const Home = () => {
             </p>
           </article>
 
-          <article>
-            <p>
+          <article className = "articole-value">
+            <span>
               🤝
-            </p>
+            </span>
             <h5>
               Spirito di Corpo
             </h5>
@@ -85,10 +99,10 @@ const Home = () => {
             </p>
           </article>
           
-          <article>
-            <p>
+          <article className = "articole-value">
+            <span>
               🚦
-            </p>
+            </span>
             <h5>
               Sicurezza Stradale
             </h5>
@@ -97,10 +111,10 @@ const Home = () => {
             </p>
           </article>
           
-          <article>
-            <p>
+          <article className = "articole-value">
+            <span>
               🚑
-            </p>
+            </span>
             <h5>
               Primo Soccorso
             </h5>
@@ -108,10 +122,11 @@ const Home = () => {
               Acquisisce competenze essenziali per intervenire in situazioni di emergenza e salvare vite. Certificazione riconosciuta.
             </p>
           </article>
-
-          <button>Scopri di più</button>
-          
         </section>
+
+        <div className = "text-center mb-5 mt-5">
+          <Button variant="outline-primary" size="lg">Scopri di più</Button>
+        </div>
       </motion.section>
 
       {/* VIDEO + PDF */}
