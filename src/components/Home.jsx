@@ -46,7 +46,7 @@ const Home = () => {
             </svg>
           </a>
           <a
-            href="#diary"
+            href="#story"
             className = "d-block mb-2"
           >
           Guarda il racconto
@@ -64,7 +64,8 @@ const Home = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        className = "mt-4"
+        className = "mt-4" 
+        id = "features"
       >
         <div id = "intro-project">
           <h3 className = "pb-2 ps-3">
@@ -135,6 +136,7 @@ const Home = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
+        id = "story"
       >
         <h3 className="section__title">
           L’esperienza sotto la lente d’ingrandimento

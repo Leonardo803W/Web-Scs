@@ -67,6 +67,29 @@
   color: white;
 }
 
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+#containerLight{
+  padding: 0.5rem;
+  border-radius: 5rem;
+}
+    
+.sunUp{
+  fill: #e9cd4f;
+}
+
+.moonUp{
+  fill: #ffffff;
+}
+
 /* DESKTOP */
 .navbar__desktop {
   display: none;
@@ -119,8 +142,24 @@
 /*css per telefono*/
 
 /*css home*/
-#home-main{
+.home-main{
   padding-bottom: 5rem;
+  position: relative;
+}
+
+.fog-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+
+    background: radial-gradient(
+        circle at 50% 30%,
+        rgba(255, 255, 255, 0.4),
+        rgba(200, 200, 200, 0.3),
+        rgba(120, 120, 120, 0.2)
+    );
+
+    backdrop-filter: blur(6px);
 }
 
 .hero {
@@ -640,8 +679,6 @@
 /*css footer*/
 
 #footer{
-  background-color: black;
-  color: white;
   border-top: 1px solid gray;
   box-shadow: 0px 8px 12px 6px;
 }

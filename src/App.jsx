@@ -6,10 +6,12 @@ import SchermataIscrizioni from "./components/schermate/SchermataIscrizioni";
 import SchermataCollaborazioni from "./components/schermate/SchermataCollaborazioni";
 import SchermataVecchiCorsi from "./components/schermate/SchermataVecchiCorsi";
 import SchermataContatti from "./components/schermate/SchermataContatti";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<SchermataHome />} />
         <Route path="/ChiSiamo" element={<SchermataChiSiamo />}/>
