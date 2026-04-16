@@ -8,6 +8,8 @@ import imgLink2 from "../img/immagini per link footer/comune novedrate.jpeg";
 import imgLink3 from "../img/immagini per link footer/regione lombardia.png";
 import imgLink4 from "../img/immagini per link footer/protezione civile como.jpeg";
 import imgLink5 from "../img/immagini per link footer/anci lombardia.gif";
+import imgCardArticoleCivica1 from '../img/card-consapevolezza-civica-1.png'
+import imgCardArticoleCivica2 from '../img/card-consapevolezza-civica-2.png'
 
 const fadeIn = {
   hidden: { opacity: 0, y: 50 },
@@ -25,15 +27,15 @@ const Home = () => {
       
       <section className = "hero">
         <h1>
-          Oltre i tuoi limiti.
-          <span>Sotto le stellette.</span>
+          Studenti Con Le Stellette
+          <span>Oltre i tuoi limiti.</span>
         </h1>
         <p>La settimana che ti svolterà la vita. Disciplina, coraggio e spirito di squadra.</p>
       </section>
 
       <motion.div
         variants={fadeIn}
-        className = "p-3"
+        className = "ps-3"
         >
         <div>
           <a
@@ -67,18 +69,14 @@ const Home = () => {
         className = "mt-4" 
         id = "features"
       >
-        <div id = "intro-project">
-          <h3 className = "pb-2 ps-3">
-            Che cosa ti proponiamo in questo progetto
-          </h3>
-          <p className = "pb-2 ps-3">Un percorso formativo multidisciplinare per sviluppare competenze pratiche e consapevolezza civica.📚</p>
-        </div>
+        <h3 id = "intro-project">
+          Che cosa ti proponiamo in questo progetto
+        </h3>
         
         <section>
           <article className = "articole-value">
-            <span>
-              📚
-            </span>
+            <img src = {imgCardArticoleCivica1} alt="" id = "articoleCivicaImg1"/>
+            <img src = {imgCardArticoleCivica2} alt="" id = "articoleCivicaImg2"/>
             <h5>
               Consapevolezza Civica
             </h5>
@@ -129,7 +127,33 @@ const Home = () => {
         </div>
       </motion.section>
 
-      {/* VIDEO + PDF */}
+      <motion.section
+        className = "section--media"
+        variants={fadeIn}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <h3>I Nostri Valori</h3>
+        <p>Ogni giorno insegniamo attraverso l'esempio e l'esperienza diretta</p>
+
+        <div>
+          <article>
+            <h5>Disciplina</h5>
+            <p>Rispetto delle regole e di se stessi</p>
+          </article>
+          <article>
+            <h5>Spirito di Corpo</h5>
+            <p>Condivisione e solidarietà tra i compagni</p>
+          </article>
+          <article>
+            <h5>Dedizione</h5>
+            <p>Impegno verso il prossimo e la comunità</p>
+          </article>
+        </div>
+      </motion.section>
+
+      {/* VIDEO */}
       <motion.section
         className = "section--media"
         variants={fadeIn}
@@ -151,52 +175,6 @@ const Home = () => {
               allowFullScreen
             />
           </div>
-
-          <div className = "section_pdf">
-            <p>
-              Se vuoi consultare la brochure del "X corso Audacia", scarica il PDF:
-            </p>
-
-            <a
-              href="/PDF/Brochure-2025.PDF"
-              download
-              className="btn"
-            >
-              Scarica PDF
-            </a>
-          </div>
-        </div>
-      </motion.section>
-
-      <motion.section
-        className = "collaboration"
-        variants={fadeIn}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        <h3 className="section__title">Con chi collaboriamo?</h3>
-
-        <div className="partners">
-          <a href="https://www.uniecampus.it">
-            <img src={imgLink1} alt="eCampus" />
-          </a>
-
-          <a href="https://www.comune.novedrate.co.it/it">
-            <img src={imgLink2} alt="Comune Novedrate" />
-          </a>
-
-          <a href="https://www.regione.lombardia.it">
-            <img src={imgLink3} alt="Regione Lombardia" />
-          </a>
-
-          <a href="https://www.facebook.com/ProtezioneCivileComo">
-            <img src={imgLink4} alt="Protezione Civile Como" />
-          </a>
-
-          <a href="https://anci.lombardia.it">
-            <img src={imgLink5} alt="ANCI Lombardia" />
-          </a>
         </div>
       </motion.section>
 
@@ -282,6 +260,38 @@ const Home = () => {
               </div>
             </div>
       </motion.div>
+
+      <motion.section
+        className = "collaboration"
+        variants={fadeIn}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <h3 className="section__title">Con chi collaboriamo?</h3>
+
+        <div className="partners">
+          <a href="https://www.uniecampus.it">
+            <img src={imgLink1} alt="eCampus" />
+          </a>
+
+          <a href="https://www.comune.novedrate.co.it/it">
+            <img src={imgLink2} alt="Comune Novedrate" />
+          </a>
+
+          <a href="https://www.regione.lombardia.it">
+            <img src={imgLink3} alt="Regione Lombardia" />
+          </a>
+
+          <a href="https://www.facebook.com/ProtezioneCivileComo">
+            <img src={imgLink4} alt="Protezione Civile Como" />
+          </a>
+
+          <a href="https://anci.lombardia.it">
+            <img src={imgLink5} alt="ANCI Lombardia" />
+          </a>
+        </div>
+      </motion.section>
 
     </main>
   );

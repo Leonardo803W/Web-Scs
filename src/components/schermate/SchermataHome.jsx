@@ -17,7 +17,7 @@ const SchermataHome = () => {
   }, [isMenuOpen]);
 
   return (
-    <section className = "position-relative">
+    <section className = "position-relative overflow-hidden">
       <header>
         <GlobalNavbarScs 
           isOpen={isMenuOpen} 
