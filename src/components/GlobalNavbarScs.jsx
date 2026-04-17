@@ -5,9 +5,14 @@ import imgLogo from "../img/logo-scs-02.png";
 const NAV_LINKS = [
   { to: "/", label: "Home" },
   { to: "/ChiSiamo", label: "Chi siamo" },
-  { to: "/Iscrizioni", label: "Iscrizioni" },
+  {
+    label: "Corsi",
+    children: [
+      { to: "/Iscrizioni", label: "Iscrizioni" },
+      { to: "/Corsi", label: "Corsi" },
+    ],
+  },
   { to: "/Collaborazioni", label: "Collaborazioni" },
-  { to: "/VecchiCorsi", label: "Vecchi corsi" },
   { to: "/Contatti", label: "Contatti" },
 ];
 
@@ -51,11 +56,28 @@ const GlobalNavbarScs = ({ isOpen, setIsOpen, darkLight, setDarkLight }) => {
         </div>
 
         <ul>
-          {NAV_LINKS.map(link => (
-            <li key={link.to}>
-              <Link to={link.to} className = "link">
-                {link.label}
-              </Link>
+          {NAV_LINKS.map((link, i) => (
+            <li key={i}>
+              
+              {!link.children ? (
+                <Link to={link.to} className="link">
+                  {link.label}
+                </Link>
+              ) : (
+                <>
+                  <span>{link.label}</span>
+                  <ul>
+                    {link.children.map(child => (
+                      <li key={child.to}>
+                        <Link to={child.to} className="link">
+                          {child.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+
             </li>
           ))}
         </ul>

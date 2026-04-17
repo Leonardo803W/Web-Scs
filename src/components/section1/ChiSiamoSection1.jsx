@@ -76,6 +76,31 @@ const ChiSiamoSection1 = () => {
                     </div>
                 </div>
 
+                {/* VIDEO */}
+                <motion.section
+                    className = "section--media"
+                    variants={fadeIn}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    id = "story"
+                >
+                    <h3 className="section__title">
+                    L’esperienza sotto la lente d’ingrandimento
+                    </h3>
+
+                    <div className="section__media">
+
+                    <div className="video-wrapper">
+                        <iframe
+                        src="https://www.youtube.com/embed/w_ZsGiLbCOc"
+                        title="Studenti con le Stellette"
+                        allowFullScreen
+                        />
+                    </div>
+                    </div>
+                </motion.section>
+
             </section>
         </>
     )
