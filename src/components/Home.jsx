@@ -28,14 +28,12 @@ const Home = () => {
     {
       id: 1,
       nameCourse: "Libertà",
-      content: "lorem lorem",
-      button: "Scopri di piu'"
+      content: "Il primo Corso 'Libertà' si è tenuto nel 2016 presso la Casa Militare Umberto I di Turate.",
     },
     {
       id: 2,
       nameCourse: "Disciplina",
       content: "lorem lorem",
-      button: "Scopri di piu'"
     },
     {
       id: 3,
@@ -118,9 +116,6 @@ const Home = () => {
           </article>
 
           <article className = "articole-value">
-            <span>
-              🤝
-            </span>
             <h5>
               Spirito di Corpo
             </h5>
@@ -130,9 +125,6 @@ const Home = () => {
           </article>
           
           <article className = "articole-value">
-            <span>
-              🚦
-            </span>
             <h5>
               Sicurezza Stradale
             </h5>
@@ -142,9 +134,6 @@ const Home = () => {
           </article>
           
           <article className = "articole-value">
-            <span>
-              🚑
-            </span>
             <h5>
               Primo Soccorso
             </h5>
@@ -164,7 +153,7 @@ const Home = () => {
       </motion.section>
 
       <motion.section
-        className = "section--media"
+        className = "section-value"
         variants={fadeIn}
         initial="hidden"
         whileInView="visible"
@@ -194,16 +183,15 @@ const Home = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        className = "mt-4" 
-        id = "features"
+        id = "courses"
       >
 
-        <h3 className = "text-center mt-5">Un tuffo nel passato</h3>
+        <h3>Un tuffo nel passato</h3>
 
         <section className="carousel-container">
 
-          <button className="buttonCarosell prev" onClick={prevSlide}>⬅️</button>
-          <button className="buttonCarosell next" onClick={nextSlide}>➡️</button>
+          <button className = "buttonCarosell prev styleButton" onClick={prevSlide}>&lt;</button>
+          <button className = "buttonCarosell next styleButton" onClick={nextSlide}>&gt;</button>
 
           {slides.map((slide, i) => {
             const position = (i - index + slides.length) % slides.length;
@@ -217,6 +205,7 @@ const Home = () => {
             return (
               <motion.div
                 key={slide.id}
+                id={`course-${slide.nameCourse.toLowerCase().replace(/\s+/g, '-')}`}
                 className="slide"
                 animate={{
                   x: adjustedPosition * 250,
@@ -230,17 +219,21 @@ const Home = () => {
                   <h5>{slide.nameCourse}</h5>
                   <p>{slide.content}</p>
                 </div>
-
-                <Button variant="outline-primary" size="lg">{slide.button}</Button>
               </motion.div>
             );
           })}
         </section>
 
-        <div className = "text-center mb-5 mt-5">
-          <Button variant="outline-primary" size="lg">
+        <div className = "text-center mb-5 mt-5 d-flex flex-column">
+          <Button variant="outline-primary" size="lg" className = "mt-3 ms-5 me-5">
             <Link to = "ChiSiamo">
               Iscriviti
+            </Link>
+          </Button>
+
+          <Button variant="outline-primary" size="lg" className = "mt-3 ms-5 me-5">
+            <Link to = "ChiSiamo">
+              Scopri i corsi
             </Link>
           </Button>
         </div>
@@ -291,20 +284,24 @@ const Home = () => {
         variants={fadeIn}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.2 }} 
       >
-        <h3 className = "text-center">L'opportunita' di mettersi sempre in gioco</h3>
+        <div className = "text-center">
+          <h3>L'opportunita' di mettersi sempre in gioco</h3>
 
-        <div>
-          <p>Commissione Social</p>
-          <p>Commissione Amministrazione</p>
-          <p>Commissione Contabilita'</p>
+          <p>scopri le comissioni in cui gli stessi ragazzi possono sperimentare e aricchire le loro skills, o scoprirne delle nuove!</p>
+        </div>
+
+        <div className = "mt-5">
+          <p className = "fakeButton">Commissione Social</p>
+          <p className = "fakeButton">Commissione Amministrazione</p>
+          <p className = "fakeButton">Commissione Contabilita'</p>
         </div>
 
         <div className = "text-center mb-5 mt-5">
           <Button variant="outline-primary" size="lg">
             <Link to = "Contatti">
-              Contatti
+              Scopri di piu'
             </Link>
           </Button>
         </div>

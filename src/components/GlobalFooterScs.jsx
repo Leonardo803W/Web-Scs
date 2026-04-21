@@ -15,7 +15,7 @@ const GlobalFooterScs = () => {
                         </p>
                     </div>
 
-                    <section className = "d-flex">
+                    <section className = "d-flex justify-content-around">
                     {/* Links */}
                     <div>
                         <h4 className="font-semibold mb-4">Link Utili</h4>
