@@ -28,7 +28,7 @@ const SchermataHome = () => {
       </header>
 
       <section className = {darkLight ? "light-mode" : "dark-mode"}>
-        <main className={`home-main ${isMenuOpen ? "fog-active" : ""}`}>
+        <main className={`homeMain ${isMenuOpen ? "fog-active" : ""}`}>
           <Home/>
         </main>
 

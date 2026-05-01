@@ -24,6 +24,36 @@ a {
   min-height: 36rem;
 }
 
+
+.fog-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+
+    background: radial-gradient(
+        circle at 50% 30%,
+        rgba(255, 255, 255, 0.4),
+        rgba(200, 200, 200, 0.3),
+        rgba(120, 120, 120, 0.2)
+    );
+
+    backdrop-filter: blur(6px);
+}
+
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.homeMain{
+  padding-bottom: 5rem;
+}
+
 /*query per css globale tablet*/
 
 @media (min-width: 426px) {

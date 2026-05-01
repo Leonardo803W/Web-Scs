@@ -67,16 +67,6 @@
   color: white;
 }
 
-.light-mode {
-  background-color: white;
-  color: black;
-}
-
-.dark-mode {
-  background-color: black;
-  color: white;
-}
-
 #containerLight{
   padding: 0.5rem;
   border-radius: 5rem;
@@ -165,43 +155,25 @@
 /*css per telefono*/
 
 /*css home*/
-.home-main{
-  padding-bottom: 5rem;
-}
 
-.fog-overlay {
-    position: fixed;
-    inset: 0;
-    z-index: 10;
-
-    background: radial-gradient(
-        circle at 50% 30%,
-        rgba(255, 255, 255, 0.4),
-        rgba(200, 200, 200, 0.3),
-        rgba(120, 120, 120, 0.2)
-    );
-
-    backdrop-filter: blur(6px);
-}
-
-.hero {
+.introHome {
   padding: 8rem 0rem 4rem 0rem;
   text-align: center;
   color: white;
 }
 
-.hero span {
+.introHome span {
   display: block;
   color: #235fb7;
   margin-top: 1rem;
 }
 
-.hero p {
+.introHome p {
   margin-top: 1rem;
   padding: 0rem 4rem 0rem 4rem;
 }
 
-.imgFastLink{
+.imgintroHome{
   width: 95%;
   margin-top: 2rem;
   border-radius: 1rem;
@@ -209,30 +181,44 @@
   color: #4c4c4cc9;
 }
 
-#intro-project{
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  margin: 2rem 3rem 0rem 3rem;
-  text-align: center;
-}
-
 .articole-value{
   position: relative;
-  margin: 2rem 1rem 3rem 1rem;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
   border: 1px solid #555555;
   padding: 1rem;
   border-radius: 2rem;
   text-align: center;
   box-shadow: 0px 1px 15px -6px;
+  background-color: #414141e8;
+  z-index: 1;
 }
 
-.articole-value span{
-  display: block;
-  background-color: #1f2129;
-  width: 30%;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  font-size: larger;
+.articoleCardImgCommonValue{
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  margin-top: 3rem;
+  z-index: 0;
+}
+
+.articoleCardImg1{
+  left: -4rem;
+  transform: rotateY(53deg);
+  border-radius: 0rem 2rem 2rem 0rem;
+  color: #4f8520;
+  box-shadow: -13px 0px 11px 2px;
+}
+
+.articoleCardImg2{
+  right: -4rem;
+  top: 0rem;
+  transform: rotateY(38deg);
+  border-radius: 2rem 0rem 0rem 2rem;
+  color: #4f8520;
+  box-shadow: 14px 0px 11px 2px;
 }
 
 .articole-value p{
@@ -241,82 +227,118 @@
 
 .section-value {
   text-align: center;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 1) -1%, rgba(54, 173, 224, 1) 26%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 6%, rgba(54, 173, 224, 1) 31%);
   border-radius: 3rem 3rem 0rem 0rem;
   margin-top: 6rem;
+  padding-bottom: 3rem;
 }
 
-#articoleCivicaImg1{
-  position: absolute;
-  width: 44%;
-  left: -2rem;
-  bottom: -1rem;
-  background: radial-gradient(circle, #979692 16%, transparent 60%);
-}
-
-#articoleCivicaImg2{
-  position: absolute;
-  width: 52%;
-  right: -3rem;
-  top: -2rem;
-  background: radial-gradient(circle, #6ba32c 16%, transparent 60%);
+.section-value article{
+  box-shadow: 0px 2px 7px #757575;
+  border-radius: 1rem;
+  width: 40%;
+  margin: 0.5rem;
 }
 
 #courses{
-  margin-top: 6rem;
+  margin-top: 2rem;
   text-align: center;
 }
 
 .carousel-container {
-    position: relative;
-    width: 100%;
-    height: 15rem;
-    margin: 3rem 0rem 4rem 0rem;
-    padding: 1rem 1rem 1rem 1rem;
+  width: 260px; /* larghezza visibile (una slide) */
+  margin: auto;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
 }
 
 .slide {
-  position: absolute;
-  margin-left: 2rem;
-  width: 70%;
-  height: 100%;
-  text-align: center;
-  box-shadow: 0px 0px 7px;
-  padding: 1rem;
-  border-radius: 1rem;
+  min-width: 85%;
+  min-height: 25rem;
+  margin: 1rem;
+  padding: 2rem;
+  transform: translateY(2rem);
+  border: #949494 solid 1px;
+  border-radius: 2rem;
+  box-shadow: 0px 0px 4px;
+  transition: all 0.4s ease;
 }
 
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
+/* Slide attiva */
+.slide.active {
+  transform: translateZ(10px);
+  opacity: 1;
+  transition: all 0.4s ease;
 }
 
 .buttonCarosell {
   position: absolute;
-  top: 50%;
+  top: 60%;
   transform: translateY(-50%);
   z-index: 10;
+  background-color: #99999999;
+  color: #1da718;
+  padding: 0.5rem;
+  border: #5ba05b solid 1px;
+  border-radius: 6rem;
 }
 
 .prev {
-  left: 0;
+  left: -5rem;
 }
 
 .next {
-  right: 0;
+  right: -5rem;
+}
+
+#course-libertà::after,
+#course-lealtà::after,
+#course-corso::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgb(33 33 33 / 40%);
+}
+
+#course-libertà > *,
+#course-lealtà > *,
+#course-corso > * {
+  position: relative;
+  z-index: 1;
 }
 
 #course-libertà{
-  background-image: url('./img/sfondo\ Chi\ siamo.jpg');
+  background-image: url('./img/immagini\ per\ section1/1corsoLiberta.jpg');
+  background-size: 32rem 25rem;
+  background-position-x: -10rem;
+  position: relative;
+  overflow: hidden;
 }
 
-.styleButton{
-  background-color: #cfcfcf78;
-  border: unset;
-  border-radius: 8rem;
-  margin: 0.5rem;
+#course-lealtà{
+  background-image: url('./img/immagini\ per\ section1/2corso.jpg');
+  background-size: 28rem 25rem;
+  background-position-x: -5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#course-corso{
+  background-image: url('./img/immagini\ per\ section1/DSC_2376.JPG mateo.JPG');
+  background-size: 39rem 25rem;
+  background-position-x: -2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.groupBottunCorsi{
+  display: flex;
+  justify-content: space-around;
+  margin: 4rem 4rem 0rem 4rem;
 }
 
 .section__media {

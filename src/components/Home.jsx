@@ -3,15 +3,18 @@ import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
 import Carousel from 'react-bootstrap/Carousel';
 import { useState } from "react";
+import { article } from "framer-motion/client";
 
-import imgFastLink from "../img/DSC_9203.JPG allievi nespoli jacchetti lesce_gruppo.JPG"
+import imgintroHome from "../img/introHome.JPG"
 import imgLink1 from "../img/immagini per link footer/ecampus.png";
 import imgLink2 from "../img/immagini per link footer/comune novedrate.jpeg";
 import imgLink3 from "../img/immagini per link footer/regione lombardia.png";
 import imgLink4 from "../img/immagini per link footer/protezione civile como.jpeg";
 import imgLink5 from "../img/immagini per link footer/anci lombardia.gif";
-import imgCardArticoleCivica1 from '../img/card-consapevolezza-civica-1.png'
-import imgCardArticoleCivica2 from '../img/card-consapevolezza-civica-2.png'
+
+import {datiCards} from './datiCards';
+import {datiCorsi} from './datiCorsi';
+
 
 const fadeIn = {
   hidden: { opacity: 0, y: 50 },
@@ -24,41 +27,23 @@ const fadeIn = {
 
 const Home = () => {
 
-  const slides = [
-    {
-      id: 1,
-      nameCourse: "Libertà",
-      content: "Il primo Corso 'Libertà' si è tenuto nel 2016 presso la Casa Militare Umberto I di Turate.",
-    },
-    {
-      id: 2,
-      nameCourse: "Disciplina",
-      content: "lorem lorem",
-    },
-    {
-      id: 3,
-      nameCourse: "Nuovo Corso",
-      content: "Unisciti e vivi l'esperienza",
-    },
-  ];
+  const [index, setIndex] = useState(0);
 
-  const [index, setIndex] = useState(0); 
-  
-  const nextSlide = () => { 
-      setIndex((prev) => (prev + 1) % slides.length); 
-    }; 
+  const nextSlide = () => {
+    setIndex((prev) => (prev + 1) % datiCorsi.length);
+  };
 
-  const prevSlide = () => { 
-    setIndex((prev) => (prev - 1 + slides.length) % slides.length); 
+  const prevSlide = () => {
+    setIndex((prev) => (prev - 1 + datiCorsi.length) % datiCorsi.length);
   };
   
   return (
-    <main className="home">
+    <main>
       
-      <section className = "hero">
+      <section className = "introHome">
         <h1>
           Studenti Con Le Stellette
-          <span>Oltre i tuoi limiti.</span>
+          <span>Scuola civica in stile militare.</span>
         </h1>
         <p>La settimana che ti svolterà la vita. Disciplina, coraggio e spirito di squadra.</p>
       </section>
@@ -69,7 +54,7 @@ const Home = () => {
         >
         <div>
           <a
-            href="#features"
+            href = "#features"
             className = "d-block mb-2"
           >
             Scopri il progetto
@@ -78,7 +63,7 @@ const Home = () => {
             </svg>
           </a>
           <a
-            href="#story"
+            href = "#story"
             className = "d-block mb-2"
           >
           Guarda il racconto
@@ -88,7 +73,7 @@ const Home = () => {
           </a>
         </div>
 
-        <img src = {imgFastLink} alt = "foto gruppo" className = "imgFastLink"/>
+        <img src = {imgintroHome} alt = "foto gruppo" className = "imgintroHome"/>
       </motion.div>
 
       <motion.section
@@ -99,53 +84,26 @@ const Home = () => {
         className = "mt-4" 
         id = "features"
       >
-        <h3 id = "intro-project">
+        <h3 className = "text-center">
           Che cosa ti proponiamo in questo progetto
         </h3>
         
-        <section>
-          <article className = "articole-value">
-            <img src = {imgCardArticoleCivica1} alt="" id = "articoleCivicaImg1"/>
-            <img src = {imgCardArticoleCivica2} alt="" id = "articoleCivicaImg2"/>
-            <h5>
-              Consapevolezza Civica
-            </h5>
-            <p>
-              Non è solo addestramento. È imparare a essere cittadini migliori attraverso la sicurezza stradale, il primo soccorso e la gestione delle emergenze.
-            </p>
-          </article>
-
-          <article className = "articole-value">
-            <h5>
-              Spirito di Corpo
-            </h5>
-            <p>
-              Insieme si vince. Sviluppa legami indissolubili con i tuoi compagni mentre affronti sfide che mettono alla prova la tua determinazione.
-            </p>
-          </article>
-          
-          <article className = "articole-value">
-            <h5>
-              Sicurezza Stradale
-            </h5>
-            <p>
-              Impara le regole della strada e sviluppa consapevolezza sui rischi della circolazione stradale per proteggere te stesso e gli altri.
-            </p>
-          </article>
-          
-          <article className = "articole-value">
-            <h5>
-              Primo Soccorso
-            </h5>
-            <p>
-              Acquisisce competenze essenziali per intervenire in situazioni di emergenza e salvare vite. Certificazione riconosciuta.
-            </p>
-          </article>
+        <section className = "mt-4">
+          {datiCards.map((item) => (
+            <article key =  {item.id} className = "position-relative">
+              <img src = {item.img1} alt = "immagine foresta" className = "articoleCardImg1 articoleCardImgCommonValue"/>
+              <div className = "articole-value">
+                <h5>{item.title}</h5>
+                <p>{item.text}</p>
+              </div>
+              <img src = {item.img2} alt = "immagine consapevolezza digitale" className = "articoleCardImg2 articoleCardImgCommonValue"/>
+            </article>
+          ))}
         </section>
 
         <div className = "text-center mb-5 mt-5">
           <Button variant="outline-primary" size="lg">
-            <Link to = "ChiSiamo">
+            <Link to = "/ChiSiamo">
               Scopri di più
             </Link>
           </Button>
@@ -159,10 +117,10 @@ const Home = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
-        <h3>I Nostri Valori</h3>
+        <h2>I Nostri Valori</h2>
         <p>Ogni giorno insegniamo attraverso l'esempio e l'esperienza diretta</p>
 
-        <div>
+        <div className = "d-flex mt-4 justify-content-center flex-wrap">
           <article>
             <h5>Disciplina</h5>
             <p>Rispetto delle regole e di se stessi</p>
@@ -179,65 +137,52 @@ const Home = () => {
       </motion.section>
 
       <motion.section
-        variants={fadeIn}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        id = "courses"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        id="courses"
       >
-
         <h3>Un tuffo nel passato</h3>
 
-        <section className="carousel-container">
+        <div className="carousel-container">
+          <button className="buttonCarosell prev" onClick={prevSlide}>
+            &lt;
+          </button>
 
-          <button className = "buttonCarosell prev styleButton" onClick={prevSlide}>&lt;</button>
-          <button className = "buttonCarosell next styleButton" onClick={nextSlide}>&gt;</button>
-
-          {slides.map((slide, i) => {
-            const position = (i - index + slides.length) % slides.length;
-            const adjustedPosition =
-              position > slides.length / 2
-                ? position - slides.length
-                : position;
-
-            if (Math.abs(adjustedPosition) > 1) return null;
-
-            return (
-              <motion.div
-                key={slide.id}
-                id={`course-${slide.nameCourse.toLowerCase().replace(/\s+/g, '-')}`}
-                className="slide"
-                animate={{
-                  x: adjustedPosition * 250,
-                  scale: adjustedPosition === 0 ? 1 : 0.7,
-                  opacity: Math.abs(adjustedPosition) > 1 ? 0 : 1,
-                  zIndex: adjustedPosition === 0 ? 2 : 1,
-                }}
-                transition={{ duration: 0.4 }}
+          <div
+            className="carousel-track"
+            style={{
+              transform: `translateX(-${index * 260}px)`
+            }}
+          >
+            {datiCorsi.map((item, i) => (
+              <div
+                key={item.id}
+                className={`slide ${i === index ? "active" : ""}`}
+                id={`course-${item.nameCourse.toLowerCase().replace(/\s+/g, '-')}`}
               >
-                <div>
-                  <h5>{slide.nameCourse}</h5>
-                  <p>{slide.content}</p>
-                </div>
-              </motion.div>
-            );
-          })}
-        </section>
+                <h5>{item.nameCourse}</h5>
+                <p>{item.content}</p>
+              </div>
+            ))}
+          </div>
 
-        <div className = "text-center mb-5 mt-5 d-flex flex-column">
-          <Button variant="outline-primary" size="lg" className = "mt-3 ms-5 me-5">
-            <Link to = "ChiSiamo">
+          <button className="buttonCarosell next" onClick={nextSlide}>
+            &gt;
+          </button>
+        </div>
+
+        <div className = "groupBottunCorsi">
+          <Button variant="outline-primary" size="lg">
+            <Link to = "/Corsi">
+              Scopri di più
+            </Link>
+          </Button>
+          <Button variant="outline-primary" size="lg">
+            <Link to = "/Iscrizioni">
               Iscriviti
             </Link>
           </Button>
-
-          <Button variant="outline-primary" size="lg" className = "mt-3 ms-5 me-5">
-            <Link to = "ChiSiamo">
-              Scopri i corsi
-            </Link>
-          </Button>
         </div>
-      
       </motion.section>
 
       <motion.section
