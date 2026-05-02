@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
+
 import GlobalNavbarScs from "../GlobalNavbarScs";
 import GlobalFooterScs from "../GlobalFooterScs";
 import Home from "../Home";
+import { color } from "framer-motion";
 
 const SchermataHome = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [darkLight, setDarkLight] = useState (false);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -22,12 +23,12 @@ const SchermataHome = () => {
         <GlobalNavbarScs 
           isOpen={isMenuOpen} 
           setIsOpen={setIsMenuOpen}
-          darkLight={darkLight}
-          setDarkLight={setDarkLight}
         />
       </header>
 
-      <section className = {darkLight ? "light-mode" : "dark-mode"}>
+      <section 
+        className = "dark-mode"
+      >
         <main className={`homeMain ${isMenuOpen ? "fog-active" : ""}`}>
           <Home/>
         </main>

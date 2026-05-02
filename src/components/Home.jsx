@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
 import Carousel from 'react-bootstrap/Carousel';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { article } from "framer-motion/client";
 
 import imgintroHome from "../img/introHome.JPG"
@@ -92,7 +92,10 @@ const Home = () => {
           {datiCards.map((item) => (
             <article key =  {item.id} className = "position-relative">
               <img src = {item.img1} alt = "immagine foresta" className = "articoleCardImg1 articoleCardImgCommonValue"/>
-              <div className = "articole-value">
+              <div 
+                className = "articole-value"
+                id={`title-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
+              >
                 <h5>{item.title}</h5>
                 <p>{item.text}</p>
               </div>
@@ -139,7 +142,8 @@ const Home = () => {
       <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        id="courses"
+        className = "courses"
+        id="story"
       >
         <h3>Un tuffo nel passato</h3>
 

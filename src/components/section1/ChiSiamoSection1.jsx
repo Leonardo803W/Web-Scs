@@ -77,9 +77,8 @@ const ChiSiamoSection1 = () => {
                 </div>
 
                 {/* VIDEO */}
-                <motion.section
+                <section
                     className = "section--media"
-                    variants={fadeIn}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.2 }}
@@ -99,7 +98,7 @@ const ChiSiamoSection1 = () => {
                         />
                     </div>
                     </div>
-                </motion.section>
+                </section>
 
             </section>
         </>

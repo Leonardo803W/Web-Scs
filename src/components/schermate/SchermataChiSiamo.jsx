@@ -10,7 +10,7 @@ const SchermataChiSiamo = () => {
     return(
         <>
             <header>
-                <GlobalNavbarScs triggerAlert = {handleMenu}/>
+                <GlobalNavbarScs/>
             </header>
             
             <main>

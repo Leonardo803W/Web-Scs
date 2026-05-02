@@ -1,26 +1,38 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
 import imgLogo from "../img/logo-scs-02.png";
 
 const NAV_LINKS = [
   { to: "/", label: "Home" },
   { to: "/ChiSiamo", label: "Chi siamo" },
-  {
-    label: "Corsi",
-    children: [
-      { to: "/Iscrizioni", label: "Iscrizioni" },
-      { to: "/Corsi", label: "Corsi" },
-    ],
-  },
+  { to: "/Iscrizioni", label: "Iscrizioni" },
+  { to: "/VecchiCorsi", label: "Corsi" },
   { to: "/Collaborazioni", label: "Collaborazioni" },
   { to: "/Contatti", label: "Contatti" },
 ];
 
-const GlobalNavbarScs = ({ isOpen, setIsOpen, darkLight, setDarkLight }) => {
+const GlobalNavbarScs = ({ isOpen, setIsOpen }) => {
 
-  const toggleLight = () => setDarkLight(prev => !prev);
+  const [darkLight, setDarkLight] = useState(() => {
+    const saved = localStorage.getItem("theme");
+    return saved ? JSON.parse(saved) : false;
+  });
+  const toggleLight = () => {
+    setDarkLight(prev => {
+      const newValue = !prev;
+      localStorage.setItem("theme", JSON.stringify(newValue));
+      window.dispatchEvent(new Event("themeChange"));
+      return newValue;
+    });
+  };
   const toggleMenu = () => setIsOpen(prev => !prev);
   const closeMenu = () => setIsOpen(false);
+
+  useEffect(() => {
+    localStorage.setItem("theme", JSON.stringify(darkLight));
+    console.log("Tema salvato:", darkLight);
+  }, [darkLight]);
 
   return (
     <header className="navbar">

@@ -12,14 +12,14 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop/>
-      <Routes>
-        <Route path="/" element={<SchermataHome />} />
-        <Route path="/ChiSiamo" element={<SchermataChiSiamo />}/>
-        <Route path="/Iscrizioni" element={<SchermataIscrizioni />}/>
-        <Route path="/Collaborazioni" element={<SchermataCollaborazioni />}/>
-        <Route path="/VecchiCorsi" element={<SchermataVecchiCorsi />}/>
-        <Route path="/Contatti" element={<SchermataContatti />}/>
-      </Routes>
+        <Routes>
+          <Route path="/" element={<SchermataHome />} />
+          <Route path="/ChiSiamo" element={<SchermataChiSiamo />}/>
+          <Route path="/Iscrizioni" element={<SchermataIscrizioni />}/>
+          <Route path="/Collaborazioni" element={<SchermataCollaborazioni />}/>
+          <Route path="/VecchiCorsi" element={<SchermataVecchiCorsi />}/>
+          <Route path="/Contatti" element={<SchermataContatti />}/>
+        </Routes>
     </BrowserRouter>
   );
 }
