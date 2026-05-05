@@ -70,6 +70,7 @@
 #containerLight{
   padding: 0.5rem;
   border-radius: 5rem;
+  opacity: 0;
 }
     
 .sunUp{
@@ -355,16 +356,6 @@
   margin: 4rem 2rem 0rem 2rem;
 }
 
-.section__media {
-  padding: 1rem 0rem 1rem 0rem;
-  margin: 2rem 0rem 5rem 0rem;
-}
-
-.video-wrapper iframe {
-  width: 100%;
-  height: 15rem;
-}
-
 .collaboration{
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 6%, rgb(255 255 255) 65%);
   padding: 1rem 1rem 7rem 1rem;
@@ -454,7 +445,7 @@
   
 }
 
-/*css ChiSiamoSection1*/
+/*css ChiSiamo*/
 
 #nascita{
   background-image: url('./img/immagini\ per\ section1/il Nucleo Istruttori.JPG');
@@ -469,39 +460,43 @@
 }
 
 #nascita div{
-  background-color: #ffffffe0;
-  padding: 1rem 0rem 1rem 1rem;
-  margin-left: clamp(8rem, 10vw, 14rem);
-  border-radius: 8rem 0rem 0rem 0rem;
+  background-color: #626262d1;
+  padding: 2rem 0rem 1rem 1rem;
+  margin-left: clamp(3rem, 10vw, 14rem);
+  border-radius: 10rem 0rem 0rem 0rem;
   text-align: center;
   width: 100%;
 }
 
 #mission{
-  background-image: url('./img/immagini\ per\ section1/immagine bacrground second div section chi siamo.jpg');
-  background-size: 28rem 18rem;
-  background-position: bottom;
-  height: 24rem;
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-}
-
-#mission div{
-  background-color: #c1c1c1;
-  padding: 0.5rem;
-  border-radius: 0rem 0rem 4rem 4rem;
   text-align: center;
+  margin: 4rem 1rem 4rem 1rem;
 }
 
-#progetto{
-  background-image: url('./img/sfondo\ Chi\ siamo.jpg');
-  background-size: 50rem 40rem;
-  background-position-x: -14rem;
-  font-size: small;
-  height: 40rem;
+#mission p{
+  margin: 1rem;
+  box-shadow: 0px 0px 12px 3px #474747;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.course-box {
+  color: #ffffff;
   padding: 1rem;
-  text-align: center;
+  border-radius: 0rem 6rem 0rem 0rem;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 23%, rgb(72 87 80) 43%);
+}
+
+.course-box ul{
+  margin: 2rem 0rem 2rem 0rem;
+  line-height: 3rem;
+}
+
+.course-box img{
+  width: 100%;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  box-shadow: 0px 0px 5px 1px white;
 }
 
 #progetto div{
@@ -511,23 +506,13 @@
   border-radius: 3rem;
 }
 
-#video{
-  text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+.media {
+  padding: 2rem 0rem 3rem 0rem;
 }
 
-#groupVideo{
-  display: flex;
-  flex-direction: column;
-}
-
-#groupVideo iframe{
+.video-wrapper iframe {
   width: 100%;
-  padding: 1rem;
-  background-color: #666149;
-  border-radius: 0rem 1rem 0rem 1rem;
-  height: 12rem;
+  height: 22rem;
 }
 
 /*query chiSiamo per tablet*/

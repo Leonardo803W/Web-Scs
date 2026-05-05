@@ -3,23 +3,25 @@ import { Link } from "react-router-dom";
 
 import GlobalFooterScs from "../GlobalFooterScs";
 import GlobalNavbarScs from "../GlobalNavbarScs";
-import ChiSiamoSection1 from "../section1/ChiSiamoSection1";
+import ChiSiamo from "../section1/ChiSiamo";
 
 const SchermataChiSiamo = () => {
 
     return(
         <>
-            <header>
-                <GlobalNavbarScs/>
-            </header>
-            
-            <main>
-                <ChiSiamoSection1/>
-            </main>
+            <section className = "position-relative overflow-hidden">
+                <header>
+                    <GlobalNavbarScs/>
+                </header>
+                
+                <main className = "dark-mode">
+                    <ChiSiamo/>
+                </main>
 
-            <footer>
-                <GlobalFooterScs/>
-            </footer>
+                <footer className = "dark-mode">
+                    <GlobalFooterScs/>
+                </footer>
+            </section>
         </>
     )
 }
