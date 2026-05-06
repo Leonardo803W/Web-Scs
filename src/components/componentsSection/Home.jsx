@@ -5,15 +5,15 @@ import Carousel from 'react-bootstrap/Carousel';
 import { useEffect, useState } from "react";
 import { article } from "framer-motion/client";
 
-import imgintroHome from "../img/introHome.JPG"
-import imgLink1 from "../img/immagini per link footer/ecampus.png";
-import imgLink2 from "../img/immagini per link footer/comune novedrate.jpeg";
-import imgLink3 from "../img/immagini per link footer/regione lombardia.png";
-import imgLink4 from "../img/immagini per link footer/protezione civile como.jpeg";
-import imgLink5 from "../img/immagini per link footer/anci lombardia.gif";
+import imgintroHome from "../../img/introHome.JPG"
+import imgLink1 from "../../img/immagini per link footer/ecampus.png";
+import imgLink2 from "../../img/immagini per link footer/comune novedrate.jpeg";
+import imgLink3 from "../../img/immagini per link footer/regione lombardia.png";
+import imgLink4 from "../../img/immagini per link footer/protezione civile como.jpeg";
+import imgLink5 from "../../img/immagini per link footer/anci lombardia.gif";
 
-import {datiCards} from './datiCards';
-import {datiCorsi} from './datiCorsi';
+import {datiCards} from '../../data/datiCards';
+import {datiCorsi} from '../../data/datiCorsi';
 
 
 const fadeIn = {

@@ -1,24 +1,18 @@
 import { useEffect, useState } from "react";
+import { Outlet } from "react-router-dom";
 
-import GlobalNavbarScs from "../GlobalNavbarScs";
-import GlobalFooterScs from "../GlobalFooterScs";
-import Home from "../Home";
-import { color } from "framer-motion";
+import GlobalNavbarScs from "../globalComponents/GlobalNavbarScs";
+import GlobalFooterScs from "../globalComponents/GlobalFooterScs";
 
-const SchermataHome = () => {
-
+const MainLayout = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+    document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
   }, [isMenuOpen]);
 
   return (
-    <section className = "position-relative overflow-hidden">
+    <section className="position-relative overflow-hidden">
       <header>
         <GlobalNavbarScs 
           isOpen={isMenuOpen} 
@@ -26,11 +20,9 @@ const SchermataHome = () => {
         />
       </header>
 
-      <section 
-        className = "dark-mode"
-      >
+      <section className="dark-mode">
         <main className={`homeMain ${isMenuOpen ? "fog-active" : ""}`}>
-          <Home/>
+          <Outlet />
         </main>
 
         <footer className={isMenuOpen ? "fog-active" : ""}>
@@ -43,4 +35,4 @@ const SchermataHome = () => {
   );
 };
 
-export default SchermataHome;
+export default MainLayout;

@@ -216,19 +216,19 @@
 }
 
 #title-consapevolezza-civica{
-  background-image: url('./img/imgCardsHome/consapevolezzaCivica1.jpg');
+  background-image: url('../img/imgCardsHome/consapevolezzaCivica1.jpg');
 }
 
 #title-unione{
-  background-image: url('./img/imgCardsHome/unione1.jpeg');
+  background-image: url('../img/imgCardsHome/unione1.jpeg');
 }
 
 #title-gestione-emergenze-naturali{
-  background-image: url('./img/imgCardsHome/emergenze1.jpg');
+  background-image: url('../img/imgCardsHome/emergenze1.jpg');
 }
 
 #title-primo-soccorso{
-  background-image: url('./img/imgCardsHome/prontoSoccorso1.jpg');
+  background-image: url('../img/imgCardsHome/prontoSoccorso1.jpg');
 }
 
 .articole-value{
@@ -327,7 +327,7 @@
 }
 
 #course-libertà{
-  background-image: url('./img/immagini\ per\ section1/1corsoLiberta.jpg');
+  background-image: url('../img/immagini\ per\ section1/1corsoLiberta.jpg');
   background-size: 32rem 25rem;
   background-position-x: -10rem;
   position: relative;
@@ -335,7 +335,7 @@
 }
 
 #course-lealtà{
-  background-image: url('./img/immagini\ per\ section1/2corso.jpg');
+  background-image: url('../img/immagini\ per\ section1/2corso.jpg');
   background-size: 28rem 25rem;
   background-position-x: -5rem;
   position: relative;
@@ -343,7 +343,7 @@
 }
 
 #course-corso{
-  background-image: url('./img/immagini\ per\ section1/DSC_2376.JPG mateo.JPG');
+  background-image: url('../img/immagini\ per\ section1/DSC_2376.JPG mateo.JPG');
   background-size: 39rem 25rem;
   background-position-x: -2rem;
   position: relative;
