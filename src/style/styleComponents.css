@@ -448,11 +448,9 @@
 /*css ChiSiamo*/
 
 #nascita{
-  background-image: url('./img/immagini\ per\ section1/il Nucleo Istruttori.JPG');
+  background-image: url('../img/immagini\ per\ section1/il Nucleo Istruttori.JPG');
   background-size: cover;
   height: 17rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
   padding-top: 0.5rem;
   background-position-x: -2.5rem;
   display: flex;
@@ -461,7 +459,7 @@
 
 #nascita div{
   background-color: #626262d1;
-  padding: 2rem 0rem 1rem 1rem;
+  padding: 3rem 0rem 1rem 3rem;
   margin-left: clamp(3rem, 10vw, 14rem);
   border-radius: 10rem 0rem 0rem 0rem;
   text-align: center;
@@ -547,24 +545,47 @@
 /*css IscrizioniSection1*/
 
 #introIscrizioni{
-  background-image: url('./img/immagini\ per\ section1/DSC_2376.JPG mateo.JPG');
+  background-image: url('../img/immagini\ per\ section1/DSC_2376.JPG mateo.JPG');
   background-size: cover;
-  height: 21rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  padding-top: 5rem;
+  position: relative;
+  background-position: left;
+  min-height: 22rem;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 13px 1px #716d62;
+  overflow: hidden;
+}
+
+#introIscrizioni::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgb(33 33 33 / 40%);
 }
 
 #introIscrizioni p{
-  background-color: #ffffffab;
-  margin-left: clamp(6rem, 30vw, 8rem);
-  padding: 1rem;
-  border-radius: 2rem 0rem 0rem 2rem;
+  padding: 6rem 2rem 0rem 5rem;
+  position: relative;
+  z-index: 1;
+}
+
+#infoIscrizioni{
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0px 0px 7px;
+  margin: 3rem 0rem 3rem 0rem;
+}
+
+#infoIscrizioni span{
+  display: block;
+  margin-top: 1rem;
+  color: #425da6;
 }
 
 .moduloInteresse{
-  padding: 2rem;
-  background-color: #f0e4d4;
+  padding: 1rem;
   margin: 1rem;
   border-radius: 1rem;
 }
@@ -573,33 +594,18 @@
 
 @media (min-width: 426px) {
 
-  #introIscrizioni {
-    height: 26rem;
-    padding-top: 1rem;
-  }
 
 }
 
 /*css Collaborazioni*/
 
-#collaboration{
-  background-image: url('././img/immagini\ per\ section1/DSC_2429.JPG');
-  background-size: 68rem 35rem;
-  padding: 0.5rem;
-  background-position-x: -39rem;
-}
-
-#firstDiv, #secondDiv{
-  margin: 1rem 1rem 1rem 1rem;
-  padding: 0.5rem;
-  background-color: #ffffffdb;
+.documentazioneCollaborazioni{
+  margin: 2rem 1rem 2rem 1rem;
   text-align: center;
   border-radius: 1rem;
+  box-shadow: 0px 0px 10px -2px;
 }
 
-#firstDiv{
-  margin: 1rem 1rem 10rem 1rem;
-}
 
 /*query Collaborazioni per tablet*/
 

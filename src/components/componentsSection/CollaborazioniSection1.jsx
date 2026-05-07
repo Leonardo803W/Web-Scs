@@ -2,12 +2,10 @@ const CollaborazioniSection1 = () => {
 
     return(
         <>
-            <section id = "collaborationBigSection">
+            <section className = "text-center">
                 <h1>Collaborazoni</h1>
-                <hr />
 
-                <section id = "collaboration">
-                    <div id = "firstDiv">
+                    <div className = "documentazioneCollaborazioni">
                         <h5>Documenti per diventare soci</h5>
 
                         <p>
@@ -15,12 +13,15 @@ const CollaborazioniSection1 = () => {
                             Tutti non vedono l’ora di fare la tua conoscenza
                         </p>      
 
-                        <div>
-                            <a href="">"PDF da mettere"</a>
-                        </div>              
+                        <a 
+                            href="/PDF/01_-_domanda_di_iscrizione_associazione_-_compilabile.pdf"
+                            download
+                            class="btn btn-primary m-3">
+                            PDF modulo per diventare socio
+                        </a>                
                     </div>
 
-                    <div id = "secondDiv">
+                    <div className = "documentazioneCollaborazioni">
                         <h5>Sei un associazione o ente pubblico/privato?</h5>
 
                         <p>
@@ -28,11 +29,16 @@ const CollaborazioniSection1 = () => {
                         </p>  
 
                         <div>
-                            <a href="">"PDF da mettere"</a>
-                            <a href="">"PDF da mettere"</a>
+                            <a 
+                                class="btn btn-primary m-3">
+                                PDF
+                            </a>   
+                            <a 
+                                class="btn btn-primary m-3">
+                                PDF
+                            </a>   
                         </div>                  
                     </div>
-                </section>
             </section>
         </>
     )

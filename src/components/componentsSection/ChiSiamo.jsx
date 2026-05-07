@@ -5,14 +5,11 @@ const ChiSiamo = () => {
     return(
         <>
             <section>
-                <h1>Chi siamo</h1>
-                <hr />
+                <h1 className = 'text-center'>Chi siamo</h1>
 
                 <div id = 'nascita'>
 
                     <div>
-                        <h3>Chi siamo:</h3>
-
                         <p>
                             L'Associazione Studenti con le stellette e nata nel 2016, inizialmente creata dai reduci di guerra,
                             cosi come altre associazioni, infatti basandosi su associazioni come associazione combattentistiche d'arma (Associazione Nazionale Carabinieri, Marinai d’Italia, Associazione Nazionale Alpini).

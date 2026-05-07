@@ -3,17 +3,20 @@ const IscrizioniSection1 = () => {
     return(
         <>
             <section>
-                <h1>Iscrizioni</h1>
-                <hr />
+                <h1 className = 'text-center'>Iscrizioni</h1>
 
                 <div id = "introIscrizioni">
                     <p>
-                        Salve aspirante Allievo! Ha deciso finalmente di prendere parte a  questa iniziativa se è in questa pagina.
+                        Salve aspirante Allievo! Ha deciso di prendere parte a  questa iniziativa se è in questa pagina.
                         Siamo molto entusiasti di accoglierla all’interno dell’associazione. E lei si sente pronto per questa nuova esperienza? 
-                        Sappiamo che ha paura di tante cose...
-                        Proprio per questo motivo se dovesse avere lo stesso volere delucidazione sul corso la invito a chiamare all 0314153471 o a scrivere a questa e-mail segreteriagenerale@studenticonlestellette.it.
                     </p>
                 </div>
+
+                <p id = "infoIscrizioni">
+                    In caso di di dubbi sul corso la invitiamo a scrivere a questa e-mail 
+                    <span>segreteriagenerale@studenticonlestellette.it</span>
+                </p>
+
 
                 <p className = "moduloInteresse">
                     In caso di interesse per avere ulteriori aggiornamenti per eventuali procedure effettive o per info,
