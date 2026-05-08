@@ -8,7 +8,7 @@ import ChiSiamo from "./components/componentsSection/ChiSiamo";
 import IscrizioniSection1 from "./components/componentsSection/IscrizioniSection1";
 import CollaborazioniSection1 from "./components/componentsSection/CollaborazioniSection1";
 import VecchiCorsiSection1 from "./components/componentsSection/VecchiCorsiSection1";
-import ContattiSection1 from "./components/componentsSection/ContattiSection1";
+import Contatti from "./components/componentsSection/Contatti";
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
           <Route path="/Iscrizioni" element={<IscrizioniSection1 />} />
           <Route path="/Collaborazioni" element={<CollaborazioniSection1 />} />
           <Route path="/VecchiCorsi" element={<VecchiCorsiSection1 />} />
-          <Route path="/Contatti" element={<ContattiSection1 />} />
+          <Route path="/Contatti" element={<Contatti />} />
         </Route>
       </Routes>
     </BrowserRouter>

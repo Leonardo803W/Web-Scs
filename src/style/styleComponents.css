@@ -701,20 +701,73 @@
 
 /*css ContattiSection1*/
 
-#coordinate h5{
-  margin: 1rem;
-  font-size: larger;
+.spanContacts{
+  display: block;
+  margin: 1rem 0rem 1rem 0rem;
 }
 
-#coordinate p{
-  margin: 1rem;
-  font-size: smaller;
+#contacts p{
+  padding: 1rem;
+}
+
+#coordinate{
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  box-shadow: 0px -8px 22px -13px;
+  border-radius: 2rem 2rem 0rem 0rem;
+}
+
+#coordinate h5{
+  padding: 2rem 1rem 3rem 1rem;
+  text-align: center;
+  line-height: 2rem;
 }
 
 #coordinate iframe{
-  border: 0px;
   width: 100%;
-  margin-bottom: 1rem;
+  min-height: 30rem;
+}
+
+.groupSocial{
+  text-align: center;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 15%, rgb(195 195 195) 51%);
+  min-height: 13rem;
+  color: black;
+}
+
+.groupSocial div{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 1rem 1rem 1rem 1rem;
+}
+
+.itemSocial{
+  box-shadow: 0px 6px 12px #000000;
+  padding: 0.5rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 2rem;
+}
+
+#tiktok{
+  fill: #ffffff;
+  background-color: black;
+}
+
+#youtube{
+  fill: #ffffff;
+  background-color: red;
+}
+
+#facebook{
+  fill: #ffffff;
+  background-color: #3b5998;
+}
+
+#instagram{
+  fill: #ffffff;
+  background-color: #c13584;
 }
 
 /*css footer*/
