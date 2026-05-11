@@ -2,7 +2,10 @@ export const datiCorsi = [
     {
       id: 1,
       nameCourse: "Libertà",
-      content: "Il primo Corso 'Libertà' si è tenuto nel 2016 presso la Casa Militare Umberto I di Turate.",
+      contentIntro: "Il primo Corso 'Libertà' si è tenuto nel 2016 presso la Casa Militare Umberto I di Turate.",
+      content: "Il primo Corso Libertà si è tenuto nel 2016 presso la Casa Militare Umberto I di Turate ed ha visto la partecipazione di 40 tra ragazzi e ragazze di quarta superiore di alcuni istituti scolastici Lombardi. Qui di seguito vediamo riportata la relazione del Corso",
+      relazioneCorso: "/pdf/relazione_i_corso_libertà.pdf",
+      programmaSettimana: "/pdf/programma_1°_corso.pdf"
     },
     {
       id: 2,

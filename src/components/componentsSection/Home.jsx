@@ -177,7 +177,7 @@ const Home = () => {
 
         <div className = "groupBottunCorsi">
           <Button variant="outline-primary" size="lg">
-            <Link to = "/Corsi">
+            <Link to = "/VecchiCorsi">
               Scopri di più
             </Link>
           </Button>

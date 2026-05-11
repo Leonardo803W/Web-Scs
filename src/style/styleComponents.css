@@ -620,82 +620,64 @@
 
 /*css VecchiCorsiSection1*/
 
-.vecchiCorsiSinistra h5{
-  margin: 1rem;
-}
-
-.vecchiCorsiDestra h5{
-  margin: 1rem;
-  text-align: end;
-}
-
-.vecchiCorsiSinistra img, .vecchiCorsiDestra img{
+.carousel-containerCorsi {
   width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
-.vecchiCorsiSinistra p, .vecchiCorsiDestra p{
-  text-align: center;
-  margin-bottom: 1rem;
-  background-color: #46a346;
+.carousel-trackCorsi {
+  display: flex;
+  transition: transform 0.4s ease;
 }
 
-.vecchiCorsiSinistra p{
-  margin-right: 3rem;
-  border-radius: 0rem 3rem 3rem 3rem;
-  transform: skewX(10deg);
-  box-shadow: -25px 0px 20px 4px;
+.slideCorsi {
+  flex: 0 0 100%;
+  padding: 1rem;
+  opacity: 0.5;
+  transform: scale(0.9);
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+    
 }
 
-.vecchiCorsiDestra p{
-  margin-left: 3rem;
-  border-radius: 2rem 0rem 3rem 3rem;
-  transform: skewX(347deg);
-  box-shadow: 25px 0px 20px 4px;
+.slideCorsi.active {
+  opacity: 1;
+  transform: scale(1);
 }
 
-.articoleCorsi{
-  display: block;
+.buttonGroupCorsi {
+  position: relative;
 }
 
-.articoleCorsi hr{
-  display: block;
+.buttonGroupCorsi{
+  display: flex;
+  position: absolute;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 1rem;
 }
 
-.hrCorsiTablet{
-  display: none;
+#corsiEffettivi-libertà article{
+  background-image: url('../img/copertina-corso-liberta.jpg');
+  background-size: cover;
+  background-color: white;
+  min-height: 26rem;
+  margin-top: 2rem;
+  border: #949494 solid 1px;
+  border-radius: 2rem;
+  box-shadow: 0px 0px 4px;
+  box-sizing: border-box;
 }
 
 /*query VecchiCorsiSection1 per tablet*/
 
-@media (min-width: 426px) {
-
-  .vecchiCorsiSinistra{
-    width: 50%;
-    padding-right: 1rem;
-    border-right: 1px solid black;
-    margin-left: 1rem;
-  }
-
-  .vecchiCorsiDestra{
-    width: 45%;
-    padding-left: 1rem;
-  }
-
-  .articoleCorsi{
-    display: flex;
-  }
-
-  .articoleCorsi hr{
-    display: none;
-  }
-
-  .hrCorsiTablet{
-    display: block;
-  }
-
-  .vecchiCorsiSinistra p, .vecchiCorsiDestra p{
-    padding: 1rem;
-    min-height: 16rem;
+@media (min-width: 768px) {
+  .carousel-container {
+    max-width: 700px;
+    margin: auto;
   }
 }
 
