@@ -197,6 +197,12 @@
 #title-primo-soccorso::after,
 #course-libertà::after,
 #course-lealtà::after,
+#course-tenacia::after,
+#course-fede::after,
+#course-onore::after,
+#course-forza::after,
+#course-coraggio::after,
+#course-dovere::after,
 #course-corso::after {
   content: "";
   position: absolute;
@@ -210,6 +216,12 @@
 #title-primo-soccorso > *,
 #course-libertà > *,
 #course-lealtà > *,
+#course-tenacia > *,
+#course-fede > *,
+#course-onore > *,
+#course-forza > *,
+#course-coraggio > *,
+#course-dovere > *,
 #course-corso > * {
   position: relative;
   z-index: 1;
@@ -275,7 +287,7 @@
 }
 
 .carousel-container {
-  width: 260px; /* larghezza visibile (una slide) */
+  width: 269px; /* larghezza visibile (una slide) */
   margin: auto;
   position: relative;
 }
@@ -327,7 +339,7 @@
 }
 
 #course-libertà{
-  background-image: url('../img/immagini\ per\ section1/1corsoLiberta.jpg');
+  background-image: url('../img/imgCardsHome/1-corso-copertina-card.jpg');
   background-size: 32rem 25rem;
   background-position-x: -10rem;
   position: relative;
@@ -335,7 +347,55 @@
 }
 
 #course-lealtà{
-  background-image: url('../img/immagini\ per\ section1/2corso.jpg');
+  background-image: url('../img/imgCardsHome/2-corso-copertina-card.jpg');
+  background-size: 28rem 25rem;
+  background-position-x: -5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#course-tenacia{
+  background-image: url('../img/imgCardsHome/3-corso-copertina-card.jpg');
+  background-size: cover;
+  background-position-x: -14rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#course-fede{
+  background-image: url('../img/imgCardsHome/4-corso-copertina-card.jpg');
+  background-size: 28rem 25rem;
+  background-position-x: -5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#course-onore{
+  background-image: url('../img/imgCardsHome/5-corso-copertina-card.jpg');
+  background-size: 28rem 25rem;
+  background-position-x: -5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#course-forza{
+  background-image: url('../img/imgCardsHome/6-corso-copertina-card.jpg');
+  background-size: 28rem 25rem;
+  background-position-x: -5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#course-coraggio{
+  background-image: url('../img/imgCardsHome/7-corso-copertina-card.jpg');
+  background-size: 28rem 25rem;
+  background-position-x: -5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#course-dovere{
+  background-image: url('../img/imgCardsHome/8-corso-copertina-card.jpg');
   background-size: 28rem 25rem;
   background-position-x: -5rem;
   position: relative;
@@ -343,7 +403,7 @@
 }
 
 #course-corso{
-  background-image: url('../img/immagini\ per\ section1/DSC_2376.JPG mateo.JPG');
+  background-image: url('../img/imgCardsHome/corso-nuovo-copertina-card.jpg.JPG');
   background-size: 39rem 25rem;
   background-position-x: -2rem;
   position: relative;
@@ -661,7 +721,7 @@
 }
 
 #corsiEffettivi-libertà article{
-  background-image: url('../img/copertina-corso-liberta.jpg');
+  background-image: url('../img/immagini\ per\ corsi/copertina-corso-1-liberta_orig.jpg');
   background-size: cover;
   background-color: white;
   min-height: 26rem;

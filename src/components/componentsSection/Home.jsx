@@ -165,7 +165,7 @@ const Home = () => {
                 id={`course-${item.nameCourse.toLowerCase().replace(/\s+/g, '-')}`}
               >
                 <h5>{item.nameCourse}</h5>
-                <p>{item.content}</p>
+                <p>{item.contentIntro}</p>
               </div>
             ))}
           </div>
