@@ -39,42 +39,43 @@ const Home = () => {
   
   return (
     <main>
-      
-      <section className = "introHome">
-        <h1>
-          Studenti Con Le Stellette
-          <span>Scuola civica in stile militare.</span>
-        </h1>
-        <p>La settimana che ti svolterà la vita. Disciplina, coraggio e spirito di squadra.</p>
-      </section>
+      <section id = "bigIntro">
+        <div className = "introHome">
+          <h1>
+            Studenti Con Le Stellette
+            <span>Scuola civica in stile militare.</span>
+          </h1>
+          <p>La settimana che ti svolterà la vita. Disciplina, coraggio e spirito di squadra.</p>
+        </div>
 
-      <motion.div
-        variants={fadeIn}
-        className = "ps-3"
-        >
-        <div>
-          <a
-            href = "#features"
-            className = "d-block mb-2"
+        <div
+          variants={fadeIn}
+          className = "introProject"
           >
-            Scopri il progetto
+          <div>
+            <a
+              href = "#features"
+              className = "d-block mb-2"
+            >
+              Scopri il progetto
+              <svg xmlns="http://www.w3.org/2000/svg" className = "ms-2" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+              </svg>
+            </a>
+            <a
+              href = "#story"
+              className = "d-block mb-2"
+            >
+            Guarda il racconto
             <svg xmlns="http://www.w3.org/2000/svg" className = "ms-2" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
             </svg>
-          </a>
-          <a
-            href = "#story"
-            className = "d-block mb-2"
-          >
-          Guarda il racconto
-          <svg xmlns="http://www.w3.org/2000/svg" className = "ms-2" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
-          </svg>
-          </a>
-        </div>
+            </a>
+          </div>
 
-        <img src = {imgintroHome} alt = "foto gruppo" className = "imgintroHome"/>
-      </motion.div>
+          <img src = {imgintroHome} alt = "foto gruppo" className = "imgintroHome"/>
+        </div>
+      </section>
 
       <motion.section
         variants={fadeIn}

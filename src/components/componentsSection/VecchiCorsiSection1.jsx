@@ -7,19 +7,20 @@ import { p, section } from "framer-motion/client";
 const VecchiCorsiSection1 = () => {
 
     const [index, setIndex] = useState(0);
+    const visibleCourses = datiCorsi.slice(0, 8);
     
       const nextSlide = () => {
-        setIndex((prev) => (prev + 1) % datiCorsi.length);
+        setIndex((prev) => (prev + 1) % visibleCourses.length);
       };
     
       const prevSlide = () => {
-        setIndex((prev) => (prev - 1 + datiCorsi.length) % datiCorsi.length);
+        setIndex((prev) => (prev - 1 + visibleCourses.length) % visibleCourses.length);
       };
 
     return(
         <>
 
-            <section>
+            <section id = "vecchiCorsi">
                 <div className="carousel-containerCorsi">
                           <div
                             className="carousel-trackCorsi"
@@ -27,7 +28,7 @@ const VecchiCorsiSection1 = () => {
                                 transform: `translateX(-${index * 100}%)`
                             }}
                             >
-                            {datiCorsi.map((item, i) => (
+                            {datiCorsi.slice(0, 8).map((item, i) => (
                               <section
                                     key={item.id}
                                     className={`slideCorsi ${i === index ? "active" : ""}`}
@@ -43,7 +44,7 @@ const VecchiCorsiSection1 = () => {
                                         <a 
                                             href={item.relazioneCorso}
                                             download
-                                            class="btn btn-primary m-4">
+                                            className="btn btn-primary m-4">
                                             Scarica qui
                                         </a>  
                                     </div>
@@ -52,7 +53,7 @@ const VecchiCorsiSection1 = () => {
                                         <a 
                                             href={item.programmaSettimana}
                                             download
-                                            class="btn btn-primary m-4">
+                                            className="btn btn-primary m-4">
                                             Scarica qui
                                         </a>  
                                     </div>

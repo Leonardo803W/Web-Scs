@@ -157,8 +157,17 @@
 
 /*css home*/
 
+#bigIntro{
+  animation: forwardIntro 1s ease-in;
+}
+
+.introProject{
+  padding: 1rem;
+  animation: forward 1s ease-in;
+}
+
 .introHome {
-  padding: 8rem 0rem 4rem 0rem;
+  padding: 1rem 0rem 2rem 0rem;
   text-align: center;
   color: white;
 }
@@ -309,7 +318,6 @@
   transition: all 0.4s ease;
 }
 
-/* Slide attiva */
 .slide.active {
   transform: translateZ(10px);
   opacity: 1;
@@ -329,7 +337,7 @@
 }
 
 .prev {
-  left: -2rem;
+  left: -1.5rem;
   top: 15rem;
 }
 
@@ -464,6 +472,28 @@
   box-shadow: 0px 0px 9px -2px #cdcdcd;
 }
 
+/*animazione per telefono*/
+
+@keyframes forward {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes forwardIntro {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /*css per tablet*/
 
 /*css home tablet*/
@@ -507,8 +537,12 @@
 
 /*css ChiSiamo*/
 
+#chiSiamo{
+  animation: forwardIntroChiSiamo 1s ease-in;
+}
+
 #nascita{
-  background-image: url('../img/immagini\ per\ section1/il Nucleo Istruttori.JPG');
+  background-image: url('../img/imgCardsHome/1-corso-copertina-card.jpg');
   background-size: cover;
   height: 17rem;
   padding-top: 0.5rem;
@@ -528,7 +562,7 @@
 
 #mission{
   text-align: center;
-  margin: 4rem 1rem 4rem 1rem;
+  margin: 2rem 1rem 4rem 1rem;
 }
 
 #mission p{
@@ -536,6 +570,7 @@
   box-shadow: 0px 0px 12px 3px #474747;
   border-radius: 1rem;
   padding: 2rem;
+  animation: missionChiSiamo 2s ease-in;
 }
 
 .course-box {
@@ -573,6 +608,44 @@
   height: 22rem;
 }
 
+/*animazione per telefono*/
+
+@keyframes missionChiSiamo{
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0px 0px 0px 0px #474747;
+  }
+  20%{
+    transform: scale(1);
+    box-shadow: 0px 0px 18px 5px #474747;
+  }
+  40%{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 6px 1px #474747;
+  }
+  60%{
+    transform: scale(1);
+    box-shadow: 0px 0px 18px 5px #474747;
+  }
+  80%{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 6px 1px #474747;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0px 0px 12px 3px #474747;
+  }
+}
+
+@keyframes forwardIntroChiSiamo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /*query chiSiamo per tablet*/
 
 @media (min-width: 426px) {
@@ -604,8 +677,12 @@
 
 /*css IscrizioniSection1*/
 
+#iscrizioni{
+  animation: forwardIntro 2s ease-in;
+}
+
 #introIscrizioni{
-  background-image: url('../img/immagini\ per\ section1/DSC_2376.JPG mateo.JPG');
+  background-image: url('../img/imgCardsHome/corso-nuovo-copertina-card.jpg.JPG');
   background-size: cover;
   position: relative;
   background-position: left;
@@ -659,6 +736,11 @@
 
 /*css Collaborazioni*/
 
+.Collaborazioni{
+  text-align: center;
+  animation: forwardIntro 2s ease-in;
+}
+
 .documentazioneCollaborazioni{
   margin: 2rem 1rem 2rem 1rem;
   text-align: center;
@@ -680,6 +762,10 @@
 
 /*css VecchiCorsiSection1*/
 
+#vecchiCorsi{
+  animation: forwardIntro 2s ease-in;
+}
+
 .carousel-containerCorsi {
   width: 100%;
   overflow: hidden;
@@ -699,8 +785,6 @@
   transition: all 0.4s ease;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-    
 }
 
 .slideCorsi.active {
@@ -717,11 +801,16 @@
   position: absolute;
   width: 100%;
   justify-content: space-around;
-  margin-top: 1rem;
 }
 
-#corsiEffettivi-libertà article{
-  background-image: url('../img/immagini\ per\ corsi/copertina-corso-1-liberta_orig.jpg');
+#corsiEffettivi-libertà article,
+#corsiEffettivi-lealtà article,
+#corsiEffettivi-tenacia article,
+#corsiEffettivi-fede article,
+#corsiEffettivi-onore article,
+#corsiEffettivi-forza article,
+#corsiEffettivi-coraggio article,
+#corsiEffettivi-dovere article{
   background-size: cover;
   background-color: white;
   min-height: 26rem;
@@ -730,6 +819,38 @@
   border-radius: 2rem;
   box-shadow: 0px 0px 4px;
   box-sizing: border-box;
+}
+
+#corsiEffettivi-libertà article{
+  background-image: url('../img/immagini\ per\ corsi/copertina-corso-1-liberta_orig.jpg');
+}
+
+#corsiEffettivi-lealtà article{
+  background-image: url('../img/immagini\ per\ corsi/copertina-corso-2-lealta.jpg');
+}
+
+#corsiEffettivi-tenacia article{
+  background-image: url('../img/immagini\ per\ corsi/copertina-corso-3-tenacia.jpg');
+}
+
+#corsiEffettivi-fede article{
+  background-image: url('../img/immagini\ per\ corsi/copertina-corso-4-fede.jpg');
+}
+
+#corsiEffettivi-onore article{
+  background-image: url('../img/immagini\ per\ corsi/copertina-corso-5-onore.jpg');
+}
+
+#corsiEffettivi-forza article{
+  background-image: url('../img/immagini\ per\ corsi/copertina-corso-6-forza.jpg');
+}
+
+#corsiEffettivi-coraggio article{
+  background-image: url('../img/immagini\ per\ corsi/copertina-corso-7-coraggio.jpg');
+}
+
+#corsiEffettivi-dovere article{
+  background-image: url('../img/immagini\ per\ corsi/copertina-corso-8-dovere.jpg');
 }
 
 /*query VecchiCorsiSection1 per tablet*/
@@ -742,6 +863,10 @@
 }
 
 /*css ContattiSection1*/
+
+.Contatti{
+  animation: forwardIntro 2s ease-in;
+}
 
 .spanContacts{
   display: block;

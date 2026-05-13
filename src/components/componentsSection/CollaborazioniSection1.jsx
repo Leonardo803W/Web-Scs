@@ -4,7 +4,7 @@ const CollaborazioniSection1 = () => {
 
     return(
         <>
-            <section className = "text-center">
+            <section className = "Collaborazioni">
                 <h1>Collaborazoni</h1>
 
                     <div className = "documentazioneCollaborazioni">

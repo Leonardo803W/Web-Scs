@@ -1,7 +1,19 @@
+import { motion } from "framer-motion";
+
+const fadeIn = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
+};
+
 const Contatti = () => {
+
     return (
         <>
-            <section>
+            <section className = "Contatti">
                 <div id = "contacts">
                     <h1>Come e dove puoi trovarci</h1>
 
@@ -41,10 +53,15 @@ const Contatti = () => {
                       referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
+            </section>
 
-                <div
-                  className = "groupSocial"
-                >
+            <motion.div
+              variants={fadeIn}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              className = "groupSocial"
+            >
                   <h5>se vuoi rimanere aggiornato i nostri social sono i seguenti:</h5>
                             
                       <div>
@@ -109,8 +126,8 @@ const Contatti = () => {
                                 </svg>
                             </a>
                         </div>
-                </div>
-            </section>
+                </motion.div>
+            
         </>
     );
 }
