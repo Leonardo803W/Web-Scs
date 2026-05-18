@@ -52,7 +52,7 @@ const Home = () => {
           variants={fadeIn}
           className = "introProject"
           >
-          <div>
+          <div className = "linkHome">
             <a
               href = "#features"
               className = "d-block mb-2"

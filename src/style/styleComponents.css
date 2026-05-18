@@ -267,7 +267,7 @@
   z-index: 1;
 }
 
-.articoleCardImgCommonValue{
+.articoleCardImg1, .articoleCardImg2{
   display: none;
 }
 
@@ -472,6 +472,10 @@
   box-shadow: 0px 0px 9px -2px #cdcdcd;
 }
 
+.linkHome{
+  display: block;
+}
+
 /*animazione per telefono*/
 
 @keyframes forward {
@@ -494,40 +498,73 @@
   }
 }
 
-/*css per tablet*/
-
 /*css home tablet*/
 @media (min-width: 426px) {
 
-  .articoleCardImgCommonValue{
-    display: block;
-    position: absolute;
-    width: 75%;
-    height: 75%;
+  .introProject{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  .imgintroHome{
+    width: 80%;
+    order: -1;
+  }
+
+  .linkHome{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
     margin-top: 3rem;
-    z-index: 0;
   }
 
   .articoleCardImg1{
-    left: -4rem;
-    transform: rotateY(53deg);
-    border-radius: 0rem 2rem 2rem 0rem;
-    color: #4f8520;
-    box-shadow: -13px 0px 11px 2px;
+    display: none;
   }
 
   .articoleCardImg2{
-    right: -4rem;
-    top: 0rem;
-    transform: rotateY(38deg);
-    border-radius: 2rem 0rem 0rem 2rem;
-    color: #4f8520;
-    box-shadow: 14px 0px 11px 2px;
+    display: block;
+    position: absolute;
+    top: 2rem;
+    height: 18rem;
+    right: -6rem;
+    transform: rotateY(59deg) scaleX(-1);
+    border-radius: 10rem 0rem 0rem 11rem;
+    box-shadow: 0px 0px 12px 1px;
   }
 
-}
+  .articole-value {
+    position: relative;
+    width: 57%;
+    margin-left: 3rem;
+    margin-right: 0rem;
+    min-height: 22rem;
+    display: flex;
+    line-height: 2rem;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-/*css per desktop*/
+  .section-value article {
+    width: 30%;
+    min-height: 9rem;
+  }
+
+  .buttonCarosell {
+    height: 15rem;
+    width: 3rem;
+  }
+
+  .next {
+    right: -15rem;
+  }
+
+  .prev {
+    left: -15rem;
+  }
+}
 
 /*css home desktop*/
 @media (min-width: 769px) {
