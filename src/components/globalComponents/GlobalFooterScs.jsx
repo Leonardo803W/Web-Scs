@@ -1,3 +1,5 @@
+import imgLogo from "../../img/logo-scs-02.png"; 
+
 const GlobalFooterScs = () => {
     
     const currentYear = new Date().getFullYear();
@@ -6,7 +8,6 @@ const GlobalFooterScs = () => {
         <>
             <section id = "footer">
                 <div className="grid md:grid-cols-3 gap-12 mb-12">
-                    {/* Brand */}
                     <div>
                         <h3 className="text-lg font-bold mb-4">SCS</h3>
                         <p className="text-muted-foreground text-sm leading-relaxed">
@@ -15,8 +16,7 @@ const GlobalFooterScs = () => {
                         </p>
                     </div>
 
-                    <section className = "d-flex justify-content-around">
-                    {/* Links */}
+                    <section className = "d-flex justify-content-around mt-3">
                     <div>
                         <h4 className="font-semibold mb-4">Link Utili</h4>
                         <ul className="space-y-2 text-sm text-muted-foreground">
@@ -43,7 +43,8 @@ const GlobalFooterScs = () => {
                         </ul>
                     </div>
 
-                    {/* Contact */}
+                    <img src={imgLogo} alt="logo" id = "logoFooter"/> 
+
                     <div>
                         <h4 className="font-semibold mb-4">Contattaci</h4>
                         <ul className="space-y-2 text-sm text-muted-foreground">
@@ -65,10 +66,8 @@ const GlobalFooterScs = () => {
                     </section>
                 </div>
 
-                {/* Divider */}
                 <div className="h-px bg-border mb-8" />
                     <hr />
-                    {/* Copyright */}
                     <div className="text-center text-sm text-muted-foreground">
                     <p>
                         &copy; {currentYear} Studenti con le Stellette. Tutti i diritti

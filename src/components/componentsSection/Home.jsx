@@ -89,9 +89,9 @@ const Home = () => {
           Che cosa ti proponiamo in questo progetto
         </h3>
         
-        <section className = "mt-4">
+        <section className = "groupArticoleEvents">
           {datiCards.map((item) => (
-            <article key =  {item.id} className = "position-relative">
+            <article key =  {item.id} className = "cardEvents">
               <img src = {item.img1} alt = "immagine foresta" className = "articoleCardImg1 articoleCardImgCommonValue"/>
               <div 
                 className = "articole-value"
@@ -242,7 +242,7 @@ const Home = () => {
           <p>scopri le comissioni in cui gli stessi ragazzi possono sperimentare e aricchire le loro skills, o scoprirne delle nuove!</p>
         </div>
 
-        <div className = "mt-5">
+        <div id = "groupFakeButton">
           <p className = "fakeButton">Commissione Social</p>
           <p className = "fakeButton">Commissione Amministrazione</p>
           <p className = "fakeButton">Commissione Contabilita'</p>
