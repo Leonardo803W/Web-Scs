@@ -759,6 +759,18 @@
   height: 22rem;
 }
 
+#chiSiamoDesktop{
+  display: none;
+}
+
+.contentChiSiamoPhone{
+  display: block;
+}
+
+#contentChiSiamoDesktop{
+  display: none;
+}
+
 /*animazione per telefono*/
 
 @keyframes missionChiSiamo{
@@ -816,6 +828,14 @@
     height: 29rem;
   }
 
+  #mission p {
+    margin: 2rem;
+    width: 40%;
+    line-height: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   #progetto {
     background-position-x: 0rem;
     padding: 6rem;
@@ -823,6 +843,76 @@
 
   #groupVideo iframe {
     height: 25rem;
+  }
+
+  #nascita {
+    margin: 2rem 0rem 0rem 0rem;
+    background-position: center;
+    background-position-x: -6rem;
+    height: 24rem;
+  }
+
+  #nascita p{
+    line-height: 2rem;
+    padding: 0rem 2rem 0rem 2rem;
+  }
+}
+
+/*query chiSiamo per laptop*/
+
+@media (min-width: 769px) {
+
+  #chiSiamo{
+    display: none;
+  }
+
+  #chiSiamoDesktop{
+    display: block;
+    display: flex;
+    margin: 8rem 1rem 8rem 1rem;
+  }
+
+  .cardChiSiamo{
+    margin: auto;
+    box-shadow: 0px 0px 12px 3px #474747;
+    border-radius: 1rem;
+    padding: 2rem;
+    animation: missionChiSiamo 2s ease-in;
+    text-align: center;
+    line-height: 1.5rem;
+    width: 35%;
+  }
+
+  .introChiSiamoDesktop{
+    background-image: url('../img/imgCardsHome/1-corso-copertina-card.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  #introChiSiamoDesktop{
+    position: relative;
+    padding: 2rem;
+  }
+
+  #introChiSiamoDesktop::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgb(33 33 33 / 70%);
+    border-radius: 1rem 8rem 1rem 8rem;
+  }
+
+  #introChiSiamoDesktop > *{
+    position: relative;
+    z-index: 1;
+  }
+
+  .contentChiSiamoPhone{
+    display: none;
+  }
+
+  #contentChiSiamoDesktop{
+    display: block;
   }
 }
 
@@ -1116,7 +1206,7 @@
 @media (min-width: 1025px) {
   
   #logoFooter{
-    width: 11%;
+    width: 8%;
     height: 8rem;
   }
 }
