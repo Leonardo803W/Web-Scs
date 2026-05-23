@@ -67,3 +67,16 @@ a {
     font-size: small;
   }
 }
+
+/*query per css globale desktop*/
+
+@media (min-width: 769px) {
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: large;
+  }
+
+  p, button {
+    font-size: medium;
+  }
+}

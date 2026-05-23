@@ -129,6 +129,7 @@ const ChiSiamo = () => {
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.2 }}
                     id = "contentChiSiamoDesktop"
+                    className = "text-center"
                 >
                     <section>
 
@@ -154,11 +155,28 @@ const ChiSiamo = () => {
 
                             <p>Un’esperienza che forma cittadini consapevoli, responsabili e pronti ad agire per la comunità, con possibilità di volontariato in realtà come Protezione Civile e Croce Rossa.</p>
 
-                            <img src = {imgProgect} alt="Immagine del progetto" />
+                            <section id = "imgMediaChiSiamoDesktop">
+                                <img src = {imgProgect} alt="Immagine del progetto" />
+                                
+                                <div id = "mediaDesktopChiSiamo">
+                                    <h3 className="section__title">
+                                        L’esperienza sotto la lente d’ingrandimento
+                                    </h3>
+
+                                    <div className="video-wrapper">
+                                        <iframe
+                                        src="https://www.youtube.com/embed/w_ZsGiLbCOc"
+                                        title="Studenti con le Stellette"
+                                        allowFullScreen
+                                        />
+                                    </div>
+                                </div>
+                            </section>
+                            
                         </div>
                     </section>
 
-                    <section>
+                    <section id = "mediaPhoneChiSiamo">
                         <h3 className="section__title">
                             L’esperienza sotto la lente d’ingrandimento
                         </h3>

@@ -20,7 +20,7 @@ const VecchiCorsiSection1 = () => {
     return(
         <>
 
-            <section id = "vecchiCorsi">
+            <section id = "vecchiCorsiDisplayPhone">
                 <div className="carousel-containerCorsi">
                           <div
                             className="carousel-trackCorsi"
@@ -58,6 +58,61 @@ const VecchiCorsiSection1 = () => {
                                         </a>  
                                     </div>
                                 </div>
+                              </section>
+                            ))}
+                          </div>
+                </div>
+                <div className = "buttonGroupCorsi">
+                    <Button variant="outline-primary" size="lg" onClick={prevSlide}>
+                        &lt;
+                    </Button>
+                    <Button variant="outline-primary" size="lg" onClick={nextSlide}>
+                        &gt;
+                    </Button>
+                </div>
+            </section>
+
+            <section id = "vecchiCorsiDisplayDesktop">
+                <div className="carousel-containerCorsi">
+                          <div
+                            className="carousel-trackCorsi"
+                            style={{
+                                transform: `translateX(-${index * 100}%)`
+                            }}
+                            >
+                            {datiCorsi.slice(0, 8).map((item, i) => (
+                              <section
+                                    key={item.id}
+                                    className={`slideCorsiDesktop ${i === index ? "active" : ""}`}
+                                    id={`corsiEffettivi-${item.nameCourse.toLowerCase().replace(/\s+/g, '-')}`}
+                                >
+                                <h5>Corso {item.nameCourse}</h5>
+                                <section className = "d-flex">
+                                    <article></article>
+                                    <div className = "w-100">
+                                        <p className = "contentSlideCorsiDesktop">{item.content}</p>
+                                        <div className = "m-4">
+                                            <div className = "ButtonCorsiDesktop">
+                                                Relazione del corso
+                                                <a 
+                                                    href={item.relazioneCorso}
+                                                    download
+                                                    className="btn btn-primary m-4">
+                                                    Scarica qui
+                                                </a>  
+                                            </div>
+                                            <div className = "ButtonCorsiDesktop">
+                                                Programma della settimana
+                                                <a 
+                                                    href={item.programmaSettimana}
+                                                    download
+                                                    className="btn btn-primary m-4">
+                                                    Scarica qui
+                                                </a>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
                               </section>
                             ))}
                           </div>

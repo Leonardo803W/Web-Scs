@@ -771,6 +771,14 @@
   display: none;
 }
 
+#mediaDesktopChiSiamo{
+  display: none;
+}
+
+#mediaPhoneChiSiamo{
+  display: block;
+}
+
 /*animazione per telefono*/
 
 @keyframes missionChiSiamo{
@@ -867,7 +875,6 @@
   }
 
   #chiSiamoDesktop{
-    display: block;
     display: flex;
     margin: 8rem 1rem 8rem 1rem;
   }
@@ -907,6 +914,11 @@
     z-index: 1;
   }
 
+  #contentChiSiamoDesktop p{
+    width: 50%;
+    margin: auto;
+  }
+
   .contentChiSiamoPhone{
     display: none;
   }
@@ -914,12 +926,66 @@
   #contentChiSiamoDesktop{
     display: block;
   }
+
+  #imgMediaChiSiamoDesktop, .course-box ul{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .course-box img {
+    height: 23rem;
+    margin-top: 4rem;
+    width: 50%;
+  }
+
+  #mediaDesktopChiSiamo{
+    display: block;
+    margin: 4rem 0rem 5rem 0rem;
+    background-color: #000000;
+    padding: 1rem;
+    border-radius: 5rem 5rem 0rem 0rem;
+  }
+
+  #mediaPhoneChiSiamo{
+    display: none;
+  }
+}
+
+/*query chiSiamo per desktop*/
+
+@media (min-width: 1026px) {
+
+  .cardChiSiamo {
+    line-height: 2rem;
+    width: 35%;
+    min-height: 37rem;
+    padding: 7rem 5rem 0rem 5rem;
+  }
+
+  .course-box ul {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .course-box img {
+    height: 30rem;
+    width: 40%;
+  }
+
+  #mediaDesktopChiSiamo{
+    width: 45%;
+  }
 }
 
 /*css IscrizioniSection1*/
 
 #iscrizioni{
   animation: forwardIntro 2s ease-in;
+}
+
+#iscrizioni h1{
+  display: block;
 }
 
 #introIscrizioni{
@@ -936,17 +1002,11 @@
   overflow: hidden;
 }
 
-#introIscrizioni::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgb(33 33 33 / 40%);
-}
-
 #introIscrizioni p{
-  padding: 6rem 2rem 0rem 5rem;
-  position: relative;
-  z-index: 1;
+  padding: 2rem;
+  background-color: #000000a3;
+  border-radius: 3rem;
+  margin: 3rem 4rem 0rem 4rem;
 }
 
 #infoIscrizioni{
@@ -972,7 +1032,47 @@
 
 @media (min-width: 426px) {
 
+  #introIscrizioni p {
+    margin: 5rem 10rem 0rem 10rem;
+  }
+}
 
+/*query IscrizioniSection1 per laptop*/
+
+@media (min-width: 769px) {
+
+  #iscrizioni h1{
+    display: none;
+  }
+
+  .moduloInteresse {
+    border-radius: 1rem;
+    padding: inherit;
+    text-align: center;
+  }
+
+  #introIscrizioni {
+    min-height: 30rem;
+  }
+
+  #introIscrizioni p {
+    margin: 5rem 15rem 0rem 15rem;
+    line-height: 2rem;
+  }
+}
+
+/*query IscrizioniSection1 per desktop*/
+
+@media (min-width: 1025px) {
+
+  #introIscrizioni p {
+    margin: 9rem 25rem 0rem 25rem;
+    line-height: 2rem;
+  }
+
+  #introIscrizioni {
+    min-height: 35rem;
+  }
 }
 
 /*css Collaborazioni*/
@@ -1003,8 +1103,15 @@
 
 /*css VecchiCorsiSection1*/
 
-#vecchiCorsi{
+#vecchiCorsiDisplayPhone{
+  display: block;
   animation: forwardIntro 2s ease-in;
+  text-align: center;
+}
+
+#vecchiCorsiDisplayDesktop{
+  display: none;
+  text-align: center;
 }
 
 .carousel-containerCorsi {
@@ -1041,7 +1148,9 @@
   display: flex;
   position: absolute;
   width: 100%;
-  justify-content: space-around;
+  top: 33rem;
+  height: 10rem;
+  justify-content: space-between;
 }
 
 #corsiEffettivi-libertà article,
@@ -1060,6 +1169,9 @@
   border-radius: 2rem;
   box-shadow: 0px 0px 4px;
   box-sizing: border-box;
+  width: 84%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #corsiEffettivi-libertà article{
@@ -1096,10 +1208,109 @@
 
 /*query VecchiCorsiSection1 per tablet*/
 
-@media (min-width: 768px) {
+@media (min-width: 426px) {
+
+  #corsiEffettivi-libertà article,
+  #corsiEffettivi-lealtà article,
+  #corsiEffettivi-tenacia article,
+  #corsiEffettivi-fede article,
+  #corsiEffettivi-onore article,
+  #corsiEffettivi-forza article,
+  #corsiEffettivi-coraggio article,
+  #corsiEffettivi-dovere article{
+    min-height: 44rem;
+  }
+
   .carousel-container {
     max-width: 700px;
     margin: auto;
+  }
+}
+
+/*query VecchiCorsiSection1 per laptop*/
+
+@media (min-width: 769px) {
+
+  #corsiEffettivi-libertà article,
+  #corsiEffettivi-lealtà article,
+  #corsiEffettivi-tenacia article,
+  #corsiEffettivi-fede article,
+  #corsiEffettivi-onore article,
+  #corsiEffettivi-forza article,
+  #corsiEffettivi-coraggio article,
+  #corsiEffettivi-dovere article{
+    margin-left: 2rem;
+    margin-right: 0;
+  }
+
+  .slideCorsiDesktop.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .slideCorsiDesktop {
+    flex: 0 0 100%;
+    padding: 1rem;
+    opacity: 0.5;
+    transform: scale(0.9);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    height: 60rem;
+    margin-top: 2rem;
+  }
+
+  #vecchiCorsiDisplayPhone{
+    display: none;
+  }
+
+  #vecchiCorsiDisplayDesktop{
+    display: block;
+  }
+
+  .contentSlideCorsiDesktop{
+    margin: 3rem 6rem 4rem 7rem;
+    line-height: 2rem;
+    text-align: justify;
+  }
+
+  .ButtonCorsiDesktop{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .buttonGroupCorsi {
+    top: 29rem;
+    height: 20rem;
+  }
+}
+
+@media (min-width: 1025px) {
+
+  #corsiEffettivi-libertà article,
+  #corsiEffettivi-lealtà article,
+  #corsiEffettivi-tenacia article,
+  #corsiEffettivi-fede article,
+  #corsiEffettivi-onore article,
+  #corsiEffettivi-forza article,
+  #corsiEffettivi-coraggio article,
+  #corsiEffettivi-dovere article{
+    min-height: 55rem;
+  }
+  
+  .slideCorsiDesktop {
+    height: 70rem;
+  }
+
+  .buttonGroupCorsi {
+    top: 25rem;
+    height: 35rem;
+  }
+
+  .contentSlideCorsiDesktop{
+    margin: 7rem 10rem 4rem 10rem;
+    line-height: 2.5rem;
   }
 }
 
