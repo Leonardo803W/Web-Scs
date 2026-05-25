@@ -185,7 +185,6 @@
 
 .imgintroHome{
   width: 95%;
-  margin-top: 2rem;
   border-radius: 1rem;
   box-shadow: 0px 0px 22px 3px;
   color: #4c4c4cc9;
@@ -631,6 +630,10 @@
 
 /*css home desktop*/
 @media (min-width: 1025px) {
+
+  .imgintroHome {
+    width: 55%;
+  }
 
   .articole-value {
     width: 35%;
@@ -1099,6 +1102,30 @@
     background-position-x: 0;
   }
 
+  .documentazioneCollaborazioni {
+    margin: 4rem 10rem 4rem 10rem;
+  }
+
+}
+
+/*query Collaborazioni per tablet*/
+
+@media (min-width: 769px) {
+
+  .Collaborazioni h1{
+    display: none
+  }
+
+  .collaborazioniIntro {
+    display: flex;
+    margin: 6rem;
+  }
+
+  .documentazioneCollaborazioni {
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+
 }
 
 /*css VecchiCorsiSection1*/
@@ -1329,20 +1356,28 @@
   padding: 1rem;
 }
 
-#coordinate{
+#coordinateDisplayForPhone{
   margin-top: 4rem;
   margin-bottom: 4rem;
   box-shadow: 0px -8px 22px -13px;
   border-radius: 2rem 2rem 0rem 0rem;
 }
 
-#coordinate h5{
+#coordinateDisplayForPhone{
+  display: block;
+}
+
+#coordinateDisplayForDesktop{
+  display: none;
+}
+
+#coordinateDisplayForPhone h5{
   padding: 2rem 1rem 3rem 1rem;
   text-align: center;
   line-height: 2rem;
 }
 
-#coordinate iframe{
+#coordinateDisplayForPhone iframe{
   width: 100%;
   min-height: 30rem;
 }
@@ -1352,6 +1387,7 @@
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 15%, rgb(195 195 195) 51%);
   min-height: 13rem;
   color: black;
+  width: 100%;
 }
 
 .groupSocial div{
@@ -1387,6 +1423,68 @@
 #instagram{
   fill: #ffffff;
   background-color: #c13584;
+}
+
+/*css ContattiSection1 per laptop*/
+
+@media (min-width: 769px) {
+
+  #contacts {
+    text-align: center;
+    margin: 4rem;
+  }
+
+  #coordinateDisplayForPhone{
+    display: none;
+  }
+
+  #coordinateDisplayForDesktop{
+    display: block;
+    box-shadow: 0px -15px 22px -18px;
+    border-radius: 4rem 0rem 0rem 0rem;
+    text-align: center;
+  }
+
+  #coordinateDisplayForDesktop iframe{
+    width: 100%;
+    min-height: 30rem;
+  }
+
+  #contacts {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .groupSocial {
+    background: linear-gradient(330deg, rgba(0, 0, 0, 1) 35%, rgb(195 195 195) 72%);
+    border-radius: 0rem 4rem 0rem 0rem;
+    width: auto;
+  }
+
+  .groupSocial div {
+    margin: 2rem 8rem 0rem 8rem;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 19rem;
+  }
+
+  #contattiDisplayForDesktop{
+    display:flex;
+  }
+  
+}
+
+/*css ContattiSection1 per laptop*/
+
+@media (min-width: 1025px) {
+
+  .groupSocial {
+    width: 50%;
+  }
+
+  #coordinateDisplayForDesktop {
+    width: 50%;
+  }
 }
 
 /*css footer*/
